@@ -1,0 +1,521 @@
+/* ===========================
+   CV STYLES
+   Elena Corio - Computational Designer
+   =========================== */
+
+/* Font imports (fallback to system Futura) */
+@font-face {
+    font-family: 'Futura Book';
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Light';
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Heavy';
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ===========================
+   GLOBAL & RESET
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+/* ===========================
+   LAYOUT: Two-Column Flex
+   =========================== */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex: 0 0 30%;
+    background-color: #E6E6E6;
+    padding: 40px 30px;
+    overflow-y: auto;
+}
+
+.content {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* ===========================
+   SIDEBAR STYLING
+   =========================== */
+
+/* Profile Image */
+.profile-image {
+    margin-bottom: 30px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* Name & Title */
+.profile-header {
+    margin-bottom: 25px;
+}
+
+.name {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+    margin: 0;
+}
+
+/* Professional Summary */
+.summary {
+    margin-bottom: 30px;
+}
+
+.summary p {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Contact Section */
+.contact {
+    margin-bottom: 30px;
+}
+
+.section-title-sidebar {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+}
+
+.icon {
+    margin-right: 8px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.contact-detail {
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* References Note */
+.references-note {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.references-note p {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+}
+
+/* ===========================
+   MAIN CONTENT STYLING
+   =========================== */
+
+/* Section Headers with Grey Bar */
+.section-title {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #F0F0F0;
+    padding: 10px 15px;
+    margin: 0 -40px 25px -40px;
+    padding-left: 40px;
+    width: calc(100% + 80px);
+}
+
+.content > section:first-child .section-title {
+    margin-top: -40px;
+}
+
+/* ===========================
+   EXPERIENCE SECTION
+   =========================== */
+
+.experience-section,
+.education-section,
+.skills-section,
+.achievements-section {
+    margin-bottom: 40px;
+}
+
+.job {
+    margin-bottom: 25px;
+}
+
+.job-title {
+    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.job-company,
+.job-dates {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+    margin: 2px 0;
+}
+
+.job-description {
+    list-style: none;
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+.job-description li {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+    margin-left: 0;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.job-description li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #888;
+}
+
+/* ===========================
+   EDUCATION SECTION
+   =========================== */
+
+.education-item {
+    margin-bottom: 25px;
+}
+
+.degree-title {
+    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.institution,
+.dates {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+    margin: 2px 0;
+}
+
+.grade {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #888;
+    font-style: italic;
+    margin: 4px 0;
+}
+
+.subjects {
+    list-style: none;
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+.subjects li {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.subjects li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #888;
+}
+
+/* ===========================
+   SKILLS SECTION
+   =========================== */
+
+.skill-group {
+    margin-bottom: 18px;
+}
+
+.skill-category {
+    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+.skill-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-list li {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.skill-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #888;
+}
+
+.proficiency {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #888;
+    font-style: italic;
+}
+
+/* ===========================
+   ACHIEVEMENTS SECTION
+   =========================== */
+
+.achievement {
+    margin-bottom: 18px;
+}
+
+.achievement-title {
+    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.achievement-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievement-list li {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 16px;
+    line-height: 1.4;
+}
+
+.achievement-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #888;
+}
+
+.publication-detail,
+.award-detail {
+    display: block;
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    color: #888;
+    font-style: italic;
+    margin-top: 2px;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 30px;
+        border-bottom: 2px solid #E6E6E6;
+    }
+
+    .content {
+        flex: 1;
+        padding: 30px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin: 0 -30px 20px -30px;
+        padding-left: 30px;
+        width: calc(100% + 60px);
+    }
+
+    .profile-image img {
+        max-width: 150px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        padding: 8px 12px;
+        margin: 0 -20px 15px -20px;
+        padding-left: 20px;
+        width: calc(100% + 40px);
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 11px;
+    }
+
+    .job-title,
+    .degree-title,
+    .skill-category {
+        font-size: 11px;
+    }
+
+    .job-description li,
+    .subjects li,
+    .skill-list li {
+        font-size: 11px;
+    }
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .sidebar {
+        background-color: #E6E6E6;
+        page-break-inside: avoid;
+    }
+
+    .content {
+        background-color: #fff;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
