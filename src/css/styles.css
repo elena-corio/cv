@@ -3,25 +3,6 @@
    Elena Corio - Computational Designer
    =========================== */
 
-/* Font imports (fallback to system Futura) */
-@font-face {
-    font-family: 'Futura Book';
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura Light';
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Futura Heavy';
-    font-weight: 700;
-    font-style: normal;
-}
-
 /* ===========================
    GLOBAL & RESET
    =========================== */
@@ -30,6 +11,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Ensure no italic anywhere */
+html, body, * {
+    font-style: normal !important;
 }
 
 html {
@@ -54,10 +40,13 @@ body {
 }
 
 .sidebar {
-    flex: 0 0 30%;
+    flex: 0 0 27%;
     background-color: #E6E6E6;
     padding: 40px 30px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .content {
@@ -74,38 +63,42 @@ body {
 /* Profile Image */
 .profile-image {
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-image img {
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
+    max-height: 260px;
     height: auto;
-    aspect-ratio: 1;
-    object-fit: cover;
+    object-fit: contain;
+    filter: grayscale(100%);
     display: block;
 }
 
 /* Name & Title */
 .profile-header {
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .name {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
     color: #000;
     margin-bottom: 8px;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .title {
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 300;
-    font-style: italic;
     color: #333;
     margin: 0;
+    text-transform: none;
 }
 
 /* Professional Summary */
@@ -117,24 +110,35 @@ body {
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
     font-size: 12px;
     font-weight: 300;
-    font-style: italic;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: justify;
 }
 
 /* Contact Section */
-.contact {
-    margin-bottom: 30px;
-}
-
 .section-title-sidebar {
     font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 700;
     color: #000;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.content {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px 40px 40px 30px;
+    overflow-y: auto;
+}
+
+.contact .icon {
+    margin-right: 8px;
+    min-width: 16px;
+    text-align: center;
+    opacity: 0.6;
+    color: #555;
+    filter: grayscale(100%) brightness(0.8);
 }
 
 .contact-list {
@@ -155,6 +159,9 @@ body {
     margin-right: 8px;
     min-width: 16px;
     text-align: center;
+    opacity: 0.6;
+    color: #555;
+    filter: grayscale(100%) brightness(0.8);
 }
 
 .contact-detail {
@@ -173,7 +180,6 @@ body {
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
     font-size: 12px;
     font-weight: 300;
-    font-style: italic;
     color: #555;
     text-align: center;
 }
@@ -186,18 +192,18 @@ body {
 .section-title {
     font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 700;
     text-transform: uppercase;
     color: #000;
     background-color: #F0F0F0;
     padding: 10px 15px;
-    margin: 0 -40px 25px -40px;
-    padding-left: 40px;
-    width: calc(100% + 80px);
+    margin: 0 0 35px 0;
+    padding-left: 12px;
+    width: 100%;
 }
 
 .content > section:first-child .section-title {
-    margin-top: -40px;
+    margin-top: 0;
 }
 
 /* ===========================
@@ -219,7 +225,6 @@ body {
     font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
     color: #000;
     margin-bottom: 4px;
 }
@@ -245,7 +250,8 @@ body {
     font-weight: 300;
     color: #000;
     margin-left: 0;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
+    line-height: 1.6;
     position: relative;
     padding-left: 16px;
 }
@@ -269,7 +275,6 @@ body {
     font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
     color: #000;
     margin-bottom: 4px;
 }
@@ -288,7 +293,7 @@ body {
     font-size: 12px;
     font-weight: 400;
     color: #888;
-    font-style: italic;
+    font-style: normal;
     margin: 4px 0;
 }
 
@@ -303,7 +308,8 @@ body {
     font-size: 12px;
     font-weight: 300;
     color: #000;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1.6;
     position: relative;
     padding-left: 16px;
 }
@@ -320,21 +326,23 @@ body {
    =========================== */
 
 .skill-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .skill-category {
     font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     color: #000;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    margin-left: 0;
 }
 
 .skill-list {
     list-style: none;
     padding-left: 0;
+    margin-left: 0;
 }
 
 .skill-list li {
@@ -342,7 +350,8 @@ body {
     font-size: 12px;
     font-weight: 300;
     color: #000;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1.6;
     position: relative;
     padding-left: 16px;
 }
@@ -358,8 +367,8 @@ body {
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
     font-size: 11px;
     font-weight: 300;
-    color: #888;
-    font-style: italic;
+    color: #999;
+    font-style: normal;
 }
 
 /* ===========================
@@ -374,7 +383,6 @@ body {
     font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
     color: #000;
     margin-bottom: 8px;
 }
@@ -403,13 +411,20 @@ body {
 }
 
 .publication-detail,
-.award-detail {
-    display: block;
+.award-detail,
+.certification-date {
+    display: inline;
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
     font-size: 11px;
     font-weight: 300;
     color: #888;
-    font-style: italic;
+    font-style: normal;
+    margin-left: 4px;
+}
+
+.publication-detail,
+.award-detail {
+    display: block;
     margin-top: 2px;
 }
 
@@ -436,9 +451,9 @@ body {
 
     .section-title {
         font-size: 20px;
-        margin: 0 -30px 20px -30px;
-        padding-left: 30px;
-        width: calc(100% + 60px);
+        margin: 0 0 20px 10px;
+        padding-left: 12px;
+        width: calc(100% - 10px);
     }
 
     .profile-image img {
@@ -466,9 +481,9 @@ body {
     .section-title {
         font-size: 18px;
         padding: 8px 12px;
-        margin: 0 -20px 15px -20px;
-        padding-left: 20px;
-        width: calc(100% + 40px);
+        margin: 0 0 15px 8px;
+        padding-left: 12px;
+        width: calc(100% - 8px);
     }
 
     .name {

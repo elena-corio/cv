@@ -78,26 +78,62 @@ cv/
 
 ## Layout & Responsiveness
 
+## Layout & Visual Design
+
 ### Container Architecture (CSS Flexbox)
 
+The sidebar uses `flex-direction: column` with `justify-content: space-between` to keep profile content at top and contact section pinned to bottom:
+
 ```css
-.container {
+.sidebar {
+  flex: 0 0 27%;                           /* Fixed 27% width */
+  background-color: #E6E6E6;
   display: flex;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.sidebar {
-  flex: 0 0 30%;               /* Fixed 30% width, no shrink */
-  background-color: #E6E6E6;
+.sidebar-top {
+  /* Profile image, name, title, summary */
+}
+
+.sidebar-bottom {
+  /* Contact header + list, references */
 }
 
 .content {
-  flex: 1;                     /* Remaining 70% */
+  flex: 1;                                 /* Remaining 73% */
   background-color: #fff;
+  padding: 40px 40px 40px 30px;
 }
 ```
 
-### Responsive Breakpoints
+### Typography Hierarchy
+
+- **Name:** 28px Futura Heavy, centered, no uppercase transform
+- **Title:** 18px Futura Light, centered
+- **Main Section Headers:** 24px Futura Heavy (EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS)
+- **Sidebar Contact Header:** 24px Futura Heavy (CONTACT, matches main headers)
+- **Sub-headers (Job, Degree, Achievement titles):** 12–13px Futura Heavy, Title Case (not uppercase)
+- **Body text (bullets):** 12px Futura Light
+- **Proficiency/Detail text:** 11px Futura Light, grey (#999)
+- **Dates/metadata:** grey inline or block spans
+
+### Spacing & Alignment
+
+- **Section headers:** 35px margin-bottom (breathing room before content)
+- **Header bars:** Full width with 0 left margin
+- **Bullet points:** 16px left padding for consistent alignment
+- **Skill category headers:** 16px left padding to align with bullet text
+- **Contact header:** 20px margin-bottom (gap before contact list)
+- **Proficiency/date text:** Light grey (#888–#999) for visual hierarchy
+
+### Filters & Styling
+
+- **Profile image:** `object-fit: contain`, `filter: grayscale(100%)`, centered
+- **Contact icons:** `opacity: 0.6`, `filter: grayscale(100%) brightness(0.8)`, greyscale effect
+- **Header bars:** #F0F0F0 background
+- **All text:** `font-style: normal !important` (no italics globally)
 
 | Device | Width | Layout | Behavior |
 |--------|-------|--------|----------|

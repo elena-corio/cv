@@ -1,20 +1,23 @@
 # CV - MA Elena Corio
 
-A modern, responsive HTML/CSS/JavaScript curriculum vitae showcasing computational design expertise and professional experience.
+A refined, responsive HTML/CSS/JavaScript curriculum vitae showcasing computational design expertise with modern typography, thoughtful spacing, and careful alignment.
 
 ## Overview
 
-This is a **static website** implementation of a professional CV with a clean, two-column layout:
-- **Left column (30%):** Profile image, name, professional summary, contact information
-- **Right column (70%):** Experience, Education, Skills, Achievements
+This is a **static website** implementation of a professional CV featuring:
+- **Left sidebar (27%):** Centered profile image (grayscale, uncrpped), name & title, professional summary, contact info pinned to bottom
+- **Right content area (73%):** Full-width grey header bars with EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS sections
 
-## Features
+## Design Features
 
-- ✅ **Responsive Design** — Adapts to mobile, tablet, and desktop screens
-- ✅ **Print-Friendly** — Optimized for printing and PDF export
-- ✅ **Modern Typography** — Futura font stack with multiple weights
-- ✅ **Clean, Semantic HTML** — Accessibility-ready structure
-- ✅ **Extensible JavaScript** — Placeholders for future interactivity
+- ✅ **Centered Profile:** Image displayed in full without cropping
+- ✅ **Careful Typography:** Heavy fonts for headers/titles, Light for body; no italics
+- ✅ **Refined Spacing:** Increased margins between sections, 35px gap after headers
+- ✅ **Aligned Headers:** Section titles aligned with bullet-point text (16px left padding)
+- ✅ **Greyscale Icons:** Contact icons rendered in muted greyscale
+- ✅ **Proficiency Levels:** Skills include inline grey proficiency badges
+- ✅ **Print-Friendly:** Optimized for PDF export
+- ✅ **Responsive Design** — Adapts to mobile (480px), tablet (768px), and desktop screens
 
 ## Project Structure
 
@@ -22,27 +25,30 @@ This is a **static website** implementation of a professional CV with a clean, t
 cv/
 ├── src/                          # Source code
 │   ├── html/
-│   │   └── index.html           # Main HTML file
+│   │   └── index.html           # Main HTML (structure, content)
 │   ├── css/
-│   │   └── styles.css           # All styling
+│   │   └── styles.css           # All styling (layout, colors, typography)
 │   ├── js/
-│   │   └── script.js            # JavaScript logic
+│   │   └── script.js            # JavaScript utilities
 │   └── assets/
 │       └── images/
-│           ├── picture.jpg      # Profile photo
+│           ├── picture.jpg      # Profile photo (grayscale)
 │           └── web.jpg          # Design reference
 ├── tests/
 │   └── cv.test.js               # Jest unit tests
 ├── docs/
-│   ├── prompt.md                # Design requirements
+│   ├── design.md                # Design specification & rationale
+│   ├── prompt.md                # Initial design requirements
 │   ├── log.md                   # Development log
 │   ├── features.md              # Feature list & roadmap
-│   └── architecture.md          # Technical design
+│   └── architecture.md          # Technical architecture
 ├── util/
+│   └── appendLog.js             # Log utility (Node.js)
 ├── .eslintrc.js                 # ESLint config
-├── .prettierrc.json             # Prettier config
-├── jest.config.js               # Jest config
-├── package.json                 # Dependencies & scripts
+├── .prettierrc.json             # Prettier formatting
+├── jest.config.js               # Jest testing config
+├── package.json                 # Dependencies & npm scripts
+├── .gitignore                   # Git ignore rules
 ├── README.md                    # This file
 └── LICENSE                      # MIT License
 ```

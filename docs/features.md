@@ -2,43 +2,53 @@
 
 ## Current Features (v1.0)
 
-### ✅ Static Content
-- **Two-column responsive layout** (30% sidebar, 70% main content)
-- **Profile section** (image, name, title, professional summary)
-- **Contact information** (location, phone, email, messaging)
-- **Experience section** (2 roles with descriptions)
-- **Education section** (3 degrees/training entries)
-- **Skills section** (7 categories with proficiency levels)
-- **Achievements section** (certifications, publications, awards)
+### ✅ Layout & Structure
+- **Refined two-column layout** (27% sidebar, 73% main content)
+- **Centered profile section** (grayscale image no-crop, name & title centered below)
+- **Pinned contact section** (bottom of sidebar using flexbox)
+- **Professional spacing** (35px gaps after headers, aligned text, 16px bullet indent)
+- **Full-width header bars** (#F0F0F0 background with grey typography)
 
-### ✅ Responsive Design
-- Desktop layout (1024px+)
-- Tablet layout (768px–1023px) — stacked sidebar
-- Mobile layout (<768px) — full-width, compressed typography
-- Small mobile (< 480px) — minimal spacing, readability optimized
+### ✅ Typography & Styling
+- **Futura font stack** with weight hierarchy (Heavy for headers, Light for body)
+- **No italics** globally (modern, clean aesthetic)
+- **Proficiency badges** in grey inline text
+- **Certification dates** in grey inline spans
+- **Careful alignment** (headers aligned with bullet text, centered sidebar content)
+
+### ✅ Content Sections
+- **Experience** (2 roles with descriptions)
+- **Education** (3 degrees/training entries)
+- **Skills** (Languages + Technologies with 6 subcategories)
+  - Languages: Italian, English, German
+  - Technologies: Visual Coding, Programming, Environmental Analysis, Structural Analysis, 3D Modeling, Other
+- **Achievements** (Certifications with dates, Publications, Awards)
+
+### ✅ Visual Polish
+- **Greyscale contact icons** with opacity filter
+- **Greyscale profile image** with `object-fit: contain` (no cropping)
+- **Proficiency levels** in muted grey (#999)
+- **Dates/metadata** subtly grey (#888)
+- **Responsive breakpoints** (768px tablet, 480px mobile)
 
 ### ✅ Print & Export
-- Print-optimized CSS (`@media print`)
-- Ctrl+P keyboard shortcut for print dialog
-- PDF-ready styling (preserves colors, maintains layout)
-
-### ✅ Interactivity (Basic)
-- Clipboard copy for email address
-- Current year auto-display
-- Print button support (if added to HTML)
+- **Print-optimized CSS** (`@media print`)
+- **PDF-ready styling** (preserves layout and colors)
+- **Ctrl+P support** for print dialog
 
 ### ✅ Accessibility (Foundation)
-- Semantic HTML5 structure (`<header>`, `<main>`, `<section>`, `<article>`)
-- Proper heading hierarchy (h1, h2, h3, h4)
+- Semantic HTML5 structure
+- Proper heading hierarchy
 - Alt text for images
 - Focus-friendly styling
 
 ### ✅ Documentation
-- Comprehensive README.md
-- Technical documentation (docs/architecture.md)
-- Feature roadmap (this file)
-- Design requirements (docs/prompt.md)
-- Development log (docs/log.md)
+- `README.md` — Quick start and overview
+- `docs/architecture.md` — Technical design with flexbox layout details
+- `docs/design.md` — Design specification and rationale
+- `docs/log.md` — Detailed development log with all changes
+- `docs/features.md` — This file (roadmap)
+- `docs/prompt.md` — Initial requirements
 
 ---
 
