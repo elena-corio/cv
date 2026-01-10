@@ -91,8 +91,39 @@
 
 ---
 
+### Phase 6: Content Structure & Skills Refactoring
+- **Code Cleanup:**
+  - Removed dead code from script.js (print, year display, copy email, scroll tracking, dark mode, PDF export)
+  - Left only working functionality: expandable sections + expand all/collapse all
+  - Cleaner, more maintainable codebase
+  
+- **Section Reorganization:**
+  - Moved Achievements section **above** Skills section (better hierarchy)
+  - Moved Research Student from Education to Experience section
+  - Updated chronological order in experience
+  
+- **Skills Section Restructure:**
+  - Changed from 7 separate skill-group articles to 2 main categories
+  - **Languages:** Italian (Native), English (C1), German (B2)
+  - **Technologies:** Consolidated all tech skills into single bullet list with subcategories:
+    - Parametric & Visual Scripting: Rhino + Grasshopper, Revit + Dynamo
+    - Programming: Python, Kotlin
+    - Environmental Analysis: Ladybug Tools, infrared.city
+    - Structural Analysis: Alpaca4d, RFEM, GSA
+    - Graphic & Communication: InDesign, Photoshop, Illustrator
+    - Productivity: PowerPoint, Excel, Word
+
+### Changes Made:
+1. **script.js**: Removed all non-functional code, kept only expandable headers logic
+2. **index.html**: 
+   - Reordered sections (Achievements before Skills)
+   - Moved Research Student to Experience
+   - Restructured Skills section with Languages + Technologies categories
+
+---
+
 ## Current Status
-✅ **Complete:** Interactive CV with expandable sections, refined spacing, and polished interactivity.
+✅ **Complete:** Clean, functional CV with optimized content structure and focused JavaScript.
 ✅ **Ready to Commit:** All changes documented, tested, and working correctly.
 
 ## Next Steps (Future)
