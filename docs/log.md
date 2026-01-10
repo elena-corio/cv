@@ -122,9 +122,34 @@
 
 ---
 
+### Phase 7: Project Structure Reorganization (Back to Root)
+- **Restructured file organization:**
+  - Moved `src/html/index.html` → `index.html` (root)
+  - Moved `src/css/styles.css` → `styles.css` (root)
+  - Moved `src/js/script.js` → `script.js` (root)
+  - Moved `src/assets/` → `assets/` (root)
+  - Deleted empty `src/` folder
+  
+- **Updated file paths:**
+  - CSS link: `../css/styles.css` → `styles.css`
+  - Image source: `../assets/images/picture.jpg` → `assets/images/picture.jpg`
+  - Script tag: `../js/script.js` → `script.js`
+  
+- **Documentation updates:**
+  - Updated `docs/features.md` with new structure
+  - Updated content counts (Experience: 3 roles, Education: 2 degrees)
+  - Updated header spacing value (20px)
+
+### Changes Made:
+1. **File structure**: Moved all files from `src/` to root for simpler organization
+2. **index.html**: Updated all relative paths to work with root-level files
+3. **docs/features.md**: Updated to reflect new structure and current features
+
+---
+
 ## Current Status
-✅ **Complete:** Clean, functional CV with optimized content structure and focused JavaScript.
-✅ **Ready to Commit:** All changes documented, tested, and working correctly.
+✅ **Complete:** Clean, functional CV with simplified root-level structure.
+✅ **Ready to Commit:** All changes documented, restructured, and working correctly.
 
 ## Next Steps (Future)
 - [ ] Test locally with `npm install && npm start`

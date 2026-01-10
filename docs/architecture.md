@@ -35,48 +35,57 @@ This is a **static website** (no build tools required, but npm scripts available
 ```
 Client Browser
     ↓
-src/html/index.html (markup structure)
+index.html (markup structure)
     ↓
-src/css/styles.css (visual design, layout, responsive)
+styles.css (visual design, layout, responsive)
     ↓
-src/js/script.js (DOM manipulation, interactivity)
+script.js (DOM manipulation, interactivity)
 ```
+
+---
+
+## Technology Stack
+
+| Layer | Tech | Purpose |
+|-------|------|---------|
+| **Markup** | HTML5 | Semantic structure, accessibility |
+| **Styling** | CSS3 | Layout (flexbox), typography, responsive design, print |
+| **Scripting** | JavaScript (ES6+) | Expandable sections, interactivity |
+| **Version Control** | Git | Track changes, history |
+| **Documentation** | Markdown | Specs, logs, guides |
+
+---
 
 ## File Structure & Responsibilities
 
 ```
 cv/
-├── src/
-│   ├── html/
-│   │   └── index.html          # Main document (structure & content)
-│   ├── css/
-│   │   └── styles.css          # All styling (layout, colors, typography)
-│   ├── js/
-│   │   └── script.js           # Interactivity (print, clipboard, etc.)
-│   └── assets/
-│       └── images/
-│           ├── picture.jpg     # Profile photo
-│           └── web.jpg         # Design reference mockup
+├── index.html              # Main document (structure & content)
+├── styles.css              # All styling (layout, colors, typography)
+├── script.js               # Interactivity (expandable sections, etc.)
+├── assets/
+│   └── images/
+│       ├── picture.jpg     # Profile photo
+│       └── web.jpg         # Design reference mockup
 ├── tests/
-│   └── cv.test.js              # Jest unit tests
+│   └── cv.test.js          # Jest unit tests
 ├── docs/
 │   ├── prompt.md           # Design requirements & decisions
 │   ├── log.md              # Development log
 │   ├── features.md         # Feature list & roadmap
+│   ├── design.md           # Design specifications
 │   └── architecture.md     # This file (technical design)
-├── .gitignore                  # Git ignore rules
-├── .eslintrc.js                # ESLint config
-├── .prettierrc.json            # Prettier formatting config
-├── jest.config.js              # Jest testing config
-├── package.json                # Project metadata & npm scripts
-├── package-lock.json           # Locked dependency versions
-├── README.md                   # Project overview & getting started
-└── LICENSE                     # MIT License
+├── .gitignore              # Git ignore rules
+├── .eslintrc.js            # ESLint config
+├── .prettierrc.json        # Prettier formatting config
+├── jest.config.js          # Jest testing config
+├── package.json            # Project metadata & npm scripts
+├── package-lock.json       # Locked dependency versions
+├── README.md               # Project overview & getting started
+└── LICENSE                 # MIT License
 ```
 
 ---
-
-## Layout & Responsiveness
 
 ## Layout & Visual Design
 

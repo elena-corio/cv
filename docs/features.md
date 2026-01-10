@@ -6,7 +6,7 @@
 - **Refined two-column layout** (27% sidebar, 73% main content)
 - **Centered profile section** (grayscale image no-crop, name & title centered below)
 - **Pinned contact section** (bottom of sidebar using flexbox)
-- **Professional spacing** (35px gaps after headers, aligned text, 16px bullet indent)
+- **Professional spacing** (20px gaps after headers, aligned text, 16px bullet indent)
 - **Full-width header bars** (#F0F0F0 background with grey typography)
 
 ### ✅ Typography & Styling
@@ -17,11 +17,11 @@
 - **Careful alignment** (headers aligned with bullet text, centered sidebar content)
 
 ### ✅ Content Sections
-- **Experience** (2 roles with descriptions)
-- **Education** (3 degrees/training entries)
-- **Skills** (Languages + Technologies with 6 subcategories)
+- **Experience** (3 roles with descriptions including Research Student)
+- **Education** (2 degrees)
+- **Skills** (Languages + Technologies)
   - Languages: Italian, English, German
-  - Technologies: Visual Coding, Programming, Environmental Analysis, Structural Analysis, 3D Modeling, Other
+  - Technologies: Parametric & Visual Scripting, Programming, Environmental Analysis, Structural Analysis, Graphic & Communication, Productivity
 - **Achievements** (Certifications with dates, Publications, Awards)
 
 ### ✅ Visual Polish
@@ -34,7 +34,7 @@
 ### ✅ Print & Export
 - **Print-optimized CSS** (`@media print`)
 - **PDF-ready styling** (preserves layout and colors)
-- **Ctrl+P support** for print dialog
+- **Keyboard support** for print dialog
 
 ### ✅ Accessibility (Foundation)
 - Semantic HTML5 structure
@@ -132,4 +132,4 @@
 
 To request a feature, update this file and create a GitHub issue or commit with details.
 
-**Last Updated:** 2026-01-08
+**Last Updated:** 2026-01-10
