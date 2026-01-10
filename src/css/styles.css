@@ -188,6 +188,76 @@ body {
    MAIN CONTENT STYLING
    =========================== */
 
+/* Expand All / Collapse All Controls */
+.expand-all-controls {
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.expand-all-button {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    background-color: #F0F0F0;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 2px;
+}
+
+.expand-all-button:hover {
+    background-color: #E0E0E0;
+    color: #333;
+}
+
+.expand-all-button.collapsed {
+    /* Button state when all sections are collapsed */
+}
+
+.expand-all-button.expanded {
+    /* Button state when all sections are expanded */
+}
+
+/* Expandable Header Styles */
+.expandable-header {
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.2s ease;
+}
+
+.expandable-header:hover {
+    opacity: 0.7;
+}
+
+.toggle-icon {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+}
+
+.expandable-header.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* Expandable Content Styles */
+.expandable-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.expandable-content.active {
+    max-height: 5000px;
+    opacity: 1;
+}
+
 /* Section Headers with Grey Bar */
 .section-title {
     font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
@@ -197,7 +267,7 @@ body {
     color: #000;
     background-color: #F0F0F0;
     padding: 10px 15px;
-    margin: 0 0 35px 0;
+    margin: 0 0 20px 0;
     padding-left: 12px;
     width: 100%;
 }

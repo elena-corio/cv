@@ -66,9 +66,20 @@
 
         <!-- MAIN CONTENT (Right Column) -->
         <main class="content">
+            <!-- Expand All / Collapse All Button -->
+            <div class="expand-all-controls">
+                <button id="expandAllBtn" class="expand-all-button">Expand All</button>
+            </div>
+
             <!-- EXPERIENCE SECTION -->
             <section class="experience-section">
-                <h2 class="section-title">EXPERIENCE</h2>
+                <div class="expandable-header" data-section="experience">
+                    <h2 class="section-title">
+                        <span class="toggle-icon">+</span>
+                        EXPERIENCE
+                    </h2>
+                </div>
+                <div class="expandable-content" id="experience">
 
                 <article class="job">
                     <h3 class="job-title">Software Engineer</h3>
@@ -93,11 +104,18 @@
                         <li>Integrated parametric workflows with structural analysis.</li>
                     </ul>
                 </article>
+                </div>
             </section>
 
             <!-- EDUCATION SECTION -->
             <section class="education-section">
-                <h2 class="section-title">EDUCATION</h2>
+                <div class="expandable-header" data-section="education">
+                    <h2 class="section-title">
+                        <span class="toggle-icon">+</span>
+                        EDUCATION
+                    </h2>
+                </div>
+                <div class="expandable-content" id="education">
 
                 <article class="education-item">
                     <h3 class="degree-title">Master of Computational Design (MaCAD)</h3>
@@ -134,11 +152,18 @@
                         <li>Parametric structural optimization</li>
                     </ul>
                 </article>
+                </div>
             </section>
 
             <!-- SKILLS SECTION -->
             <section class="skills-section">
-                <h2 class="section-title">SKILLS</h2>
+                <div class="expandable-header" data-section="skills">
+                    <h2 class="section-title">
+                        <span class="toggle-icon">+</span>
+                        SKILLS
+                    </h2>
+                </div>
+                <div class="expandable-content" id="skills">
 
                 <article class="skill-group">
                     <h4 class="skill-category">Languages</h4>
@@ -201,11 +226,18 @@
                         <li>Collaborative Design Tools <span class="proficiency">(Advanced)</span></li>
                     </ul>
                 </article>
+                </div>
             </section>
 
             <!-- ACHIEVEMENTS SECTION -->
             <section class="achievements-section">
-                <h2 class="section-title">ACHIEVEMENTS</h2>
+                <div class="expandable-header" data-section="achievements">
+                    <h2 class="section-title">
+                        <span class="toggle-icon">+</span>
+                        ACHIEVEMENTS
+                    </h2>
+                </div>
+                <div class="expandable-content" id="achievements">
 
                 <article class="achievement">
                     <h4 class="achievement-title">Certifications</h4>
@@ -235,6 +267,7 @@
                         </li>
                     </ul>
                 </article>
+                </div>
             </section>
         </main>
     </div>

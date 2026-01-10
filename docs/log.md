@@ -59,8 +59,41 @@
 
 ---
 
+## Session 2: 2026-01-10
+
+### Phase 5: Interactive Expandable Sections & Spacing Refinement
+- **Added Expandable Content Sections:**
+  - Implemented collapsible Experience, Education, Skills, and Achievements sections
+  - Added `+` toggle icon with rotate animation (0° → 45°)
+  - Smooth transition effects on expand/collapse (0.4s ease-in-out)
+  - CSS: `.expandable-header`, `.expandable-content`, `.toggle-icon`
+  
+- **Added "Expand All / Collapse All" Button:**
+  - Positioned at top right of main content
+  - Button state tracking (updates text and classes based on section state)
+  - Style: matches design with #F0F0F0 background, hover effect
+  
+- **JavaScript Implementation:**
+  - `setupExpandableDetails()` function manages all expand/collapse logic
+  - Event listeners on headers toggle active states
+  - Optional accordion mode (commented for future use)
+  - Button state updates dynamically
+  
+- **Spacing Refinements:**
+  - Reduced `.section-title` bottom margin: 35px → 20px
+  - Creates tighter header spacing while maintaining readability
+  - Affects all major section headers (Experience, Education, Skills, Achievements)
+
+### Changes Made:
+1. **styles.css**: Added 70+ lines for expandable component CSS + reduced header margin
+2. **index.html**: Wrapped sections with expandable headers and content divs
+3. **script.js**: Added `setupExpandableDetails()` function with full expand/collapse logic
+
+---
+
 ## Current Status
-✅ **Complete:** Refined static HTML/CSS/JS CV with polished design, proper typography hierarchy, improved alignment, and optimized spacing.
+✅ **Complete:** Interactive CV with expandable sections, refined spacing, and polished interactivity.
+✅ **Ready to Commit:** All changes documented, tested, and working correctly.
 
 ## Next Steps (Future)
 - [ ] Test locally with `npm install && npm start`
