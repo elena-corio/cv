@@ -3,6 +3,16 @@
    =========================== */
 
 @media (max-width: 768px) {
+    #sidebar-container {
+        width: 100%;
+        flex: 0 0 100%;
+        max-height: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
     .header {
         padding: 15px 0;
         margin-bottom: 20px;
@@ -90,8 +100,48 @@
 }
 
 @media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    #sidebar-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #E6E6E6;
+        z-index: 1000;
+        overflow-y: auto;
+        flex: none;
+    }
+
+    #sidebar-container.open {
+        display: flex;
+    }
+
+    .hamburger-btn {
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 6px;
+        color: #000;
+    }
+
+    .sidebar-close-btn {
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 6px;
+        color: #000;
+    }
+
     .sidebar {
         padding: 20px;
+        position: relative;
     }
 
     .content {
