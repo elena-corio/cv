@@ -11,6 +11,8 @@
 (function() {
 	'use strict';
 
+	console.log('Script.js loaded, document.readyState:', document.readyState);
+
 	// ===========================
 	// Expandable Details Component
 	// ===========================
@@ -84,6 +86,38 @@
 	}
 
 	// ===========================
+	// Load Header Component
+	// ===========================
+	async function loadHeader() {
+		console.log('loadHeader() called');
+		const headerContainer = document.getElementById('header-container');
+		console.log('headerContainer found:', !!headerContainer);
+		
+		if (!headerContainer) {
+			console.warn('header-container not found in DOM');
+			return;
+		}
+
+		try {
+			// Determine if we're in src/ folder by checking current page path
+			const isInSrc = window.location.pathname.includes('/src/');
+			const headerPath = isInSrc ? 'header.html' : 'src/header.html';
+			
+			console.log('Loading header from:', headerPath, 'isInSrc:', isInSrc);
+			
+			const response = await fetch(headerPath);
+			if (!response.ok) throw new Error(`HTTP ${response.status}`);
+			const html = await response.text();
+			console.log('Header loaded successfully');
+			headerContainer.innerHTML = html;
+		} catch (error) {
+			console.error('Error loading header:', error);
+			// Fallback: show error message
+			headerContainer.innerHTML = '<p style="padding: 20px; color: #999;">Header unavailable</p>';
+		}
+	}
+
+	// ===========================
 	// Load Sidebar Component
 	// ===========================
 	async function loadSidebar() {
@@ -109,10 +143,71 @@
 		}
 	}
 
-	// Load sidebar when DOM is ready
+	// Load sidebar and header when DOM is ready
 	async function init() {
-		await loadSidebar();
-		setupExpandableDetails();
+		console.log('init() called');
+		try {
+			await loadHeader();
+		} catch (e) {
+			console.error('Error in loadHeader:', e);
+		}
+		
+		// Small delay to ensure header is in DOM before setting active state
+		setTimeout(() => {
+			try {
+				setActiveHeaderLink();
+			} catch (e) {
+				console.error('Error in setActiveHeaderLink:', e);
+			}
+		}, 100);
+		
+		try {
+			await loadSidebar();
+		} catch (e) {
+			console.error('Error in loadSidebar:', e);
+		}
+		
+		// Show expand all button only on CV page
+		const isOnCVPage = window.location.pathname.includes('/cv.html');
+		const expandAllBtn = document.getElementById('expandAllBtn');
+		if (expandAllBtn) {
+			expandAllBtn.style.display = isOnCVPage ? 'inline' : 'none';
+		}
+		
+		try {
+			setupExpandableDetails();
+		} catch (e) {
+			console.error('Error in setupExpandableDetails:', e);
+		}
+	}
+
+	// Set active state on header links
+	function setActiveHeaderLink() {
+		const pathname = window.location.pathname;
+		const headerLinks = document.querySelectorAll('.header-link');
+		
+		console.log('Current pathname:', pathname);
+		
+		headerLinks.forEach(link => {
+			link.classList.remove('active');
+			const page = link.dataset.page;
+			
+			// Determine current page
+			const isHome = pathname.includes('index.html') || pathname === '/' || pathname === '';
+			const isCV = pathname.includes('cv.html');
+			const isPortfolio = pathname.includes('portfolio.html');
+			
+			if (page === 'home' && isHome) {
+				link.classList.add('active');
+				console.log('Set HOME as active');
+			} else if (page === 'cv' && isCV) {
+				link.classList.add('active');
+				console.log('Set CV as active');
+			} else if (page === 'portfolio' && isPortfolio) {
+				link.classList.add('active');
+				console.log('Set PORTFOLIO as active');
+			}
+		});
 	}
 
 	if (document.readyState === 'loading') {

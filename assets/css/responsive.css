@@ -3,6 +3,25 @@
    =========================== */
 
 @media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    .header-nav {
+        gap: 20px;
+    }
+
+    .header-link {
+        font-size: 12px;
+        padding: 6px 0;
+    }
+
+    .expand-all-link {
+        font-size: 11px;
+        margin-left: auto;
+    }
+
     .container {
         flex-direction: column;
     }
@@ -32,7 +51,7 @@
     }
 
     .profile-image img {
-        max-width: 150px;
+        max-width: 160px;
     }
 
     .name {
@@ -101,7 +120,7 @@
     }
 
     .profile-image img {
-        max-width: 120px;
+        max-width: 100px;
     }
 
     .summary p {
@@ -155,5 +174,24 @@
 
     .page-header {
         margin-bottom: 20px;
+    }
+
+    .header {
+        padding: 12px 0;
+        margin-bottom: 15px;
+    }
+
+    .header-nav {
+        gap: 12px;
+    }
+
+    .header-link {
+        font-size: 10px;
+        padding: 4px 0;
+    }
+
+    .expand-all-link {
+        font-size: 10px;
+        margin-left: auto;
     }
 }
