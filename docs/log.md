@@ -147,9 +147,30 @@
 
 ---
 
+## Session 2: 2026-01-11
+
+### Phase 5: Responsive Design Improvements
+- **Fixed mobile typography scaling:**
+  - Increased base font size from 12px to 13px (body, job descriptions)
+  - Improved line-height from 1.6 to 1.7 for better text readability
+  - Adjusted heading sizes consistently across breakpoints
+  - Name: 24px on tablets (was 18px), 20px on mobile (was 16px)
+  - CONTACT header: 20px on tablets, 18px on mobile (now consistent with section headers)
+  - Title: 14px on tablets, 12px on mobile
+
+- **Enhanced text layout and alignment:**
+  - Added left margins to all content items (job, education, achievement, skill groups): 12px
+  - Increased bullet point left padding from 16px to 24px for all lists
+  - Changed text alignment from `text-align: justify` to `text-align: left` for better mobile readability
+  - Improved spacing between list items (margin-bottom increased from 10px to 12px)
+
+- **Tested responsive design:**
+  - Used Chrome DevTools device toolbar to verify layout on different screen sizes
+  - Confirmed consistency between tablet (768px) and mobile (480px) breakpoints
+
 ## Current Status
-✅ **Complete:** Clean, functional CV with simplified root-level structure.
-✅ **Ready to Commit:** All changes documented, restructured, and working correctly.
+✅ **Complete:** Clean, functional CV with improved responsive design and mobile optimization.
+✅ **Ready to Commit:** All typography, spacing, and alignment changes documented and tested.
 
 ## Next Steps (Future)
 - [ ] Test locally with `npm install && npm start`

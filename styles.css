@@ -24,8 +24,8 @@ html {
 
 body {
     font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.7;
     color: #000;
     background-color: #fff;
 }
@@ -289,6 +289,7 @@ body {
 
 .job {
     margin-bottom: 25px;
+    margin-left: 12px;
 }
 
 .job-title {
@@ -316,14 +317,14 @@ body {
 
 .job-description li {
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     color: #000;
     margin-left: 0;
-    margin-bottom: 10px;
-    line-height: 1.6;
+    margin-bottom: 12px;
+    line-height: 1.7;
     position: relative;
-    padding-left: 16px;
+    padding-left: 24px;
 }
 
 .job-description li:before {
@@ -339,6 +340,7 @@ body {
 
 .education-item {
     margin-bottom: 25px;
+    margin-left: 12px;
 }
 
 .degree-title {
@@ -378,6 +380,8 @@ body {
     font-size: 12px;
     font-weight: 300;
     color: #000;
+    padding-left: 24px;
+    position: relative;
     margin-bottom: 10px;
     line-height: 1.6;
     position: relative;
@@ -396,8 +400,7 @@ body {
    =========================== */
 
 .skill-group {
-    margin-bottom: 20px;
-}
+    margin-bottom: 20px;    margin-left: 12px;}
 
 .skill-category {
     font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
@@ -447,6 +450,7 @@ body {
 
 .achievement {
     margin-bottom: 18px;
+    margin-left: 12px;
 }
 
 .achievement-title {
@@ -469,7 +473,7 @@ body {
     color: #000;
     margin-bottom: 6px;
     position: relative;
-    padding-left: 16px;
+    padding-left: 24px;
     line-height: 1.4;
 }
 
@@ -526,16 +530,30 @@ body {
         width: calc(100% - 10px);
     }
 
+    .section-title-sidebar {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
     .profile-image img {
         max-width: 150px;
     }
 
     .name {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .title {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .summary p {
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .contact-list li {
+        margin-bottom: 8px;
     }
 }
 
@@ -556,12 +574,26 @@ body {
         width: calc(100% - 8px);
     }
 
+    .section-title-sidebar {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
     .name {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .title {
+        font-size: 12px;
+    }
+
+    .profile-image img {
+        max-width: 120px;
+    }
+
+    .summary p {
         font-size: 11px;
+        text-align: left;
     }
 
     .job-title,
@@ -574,6 +606,11 @@ body {
     .subjects li,
     .skill-list li {
         font-size: 11px;
+    }
+
+    .contact-list li {
+        font-size: 11px;
+        margin-bottom: 6px;
     }
 }
 
