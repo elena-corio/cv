@@ -1,7 +1,7 @@
 {
   "name": "elena-corio-cv",
   "version": "1.0.0",
-  "description": "Professional CV website for MA Elena Corio - Computational Designer",
+  "description": "Professional CV website for MA Elena Corio",
   "main": "index.html",
   "scripts": {
     "start": "http-server . -p 8000 -o",

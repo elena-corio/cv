@@ -387,3 +387,18 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 ✅ **Responsive:** Working perfectly on mobile (centered links) and laptop (fixed sidebar)
 ✅ **Accessibility:** Text-based navigation is more accessible than buttons
 ✅ **Ready for Testing:** All tests pass with updated assertions
+
+---
+
+## Session 5: 2026-01-11
+
+### Phase 9: Homepage Content Update
+- **Updated homepage title and subtitle:**
+  - Title changed from "Welcome" to "ELENA CORIO"
+  - Subtitle changed from "Explore my work and experience" to "Computational Design · Architecture · Digital Workflows"
+  - Better reflects professional identity and core expertise areas
+  - More visually prominent with name as main title
+
+### Changes Made:
+1. **index.html**: Updated h2.home-title text and p.home-subtitle text
+2. **docs/log.md**: Added Phase 9 documentation
