@@ -57,7 +57,20 @@
     text-align: justify;
 }
 
+/* Sidebar Top Section */
+.sidebar-top {
+    flex: 0 0 auto;
+}
+
 /* Contact Section */
+.sidebar-bottom {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+.contact {
+}
+
 .section-title-sidebar {
     font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
     font-size: 24px;

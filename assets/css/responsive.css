@@ -5,45 +5,45 @@
 /* Small laptops / larger tablets (768px to 1024px width) */
 @media (min-width: 769px) and (max-width: 1024px) {
     #sidebar-container {
-        padding: 30px 20px;
+        padding: 25px 15px;
     }
 
     .sidebar {
-        padding: 30px 20px;
+        padding: 25px 15px;
     }
 
     .profile-image img {
-        max-width: 140px;
+        max-width: 120px;
     }
 
     .name {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .title {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .summary p {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .section-title-sidebar {
-        font-size: 20px;
-        margin-bottom: 12px;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     .contact-list li {
-        font-size: 11px;
-        margin-bottom: 6px;
+        font-size: 10px;
+        margin-bottom: 5px;
     }
 
     .home-title {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .home-subtitle {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
@@ -93,6 +93,16 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .sidebar-top {
+        padding-bottom: 0;
+    }
+
+    .sidebar-bottom {
+        position: static;
+        padding: 20px 0 0 0;
+        background-color: transparent;
     }
 
     .content {
