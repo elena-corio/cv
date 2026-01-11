@@ -1,0 +1,154 @@
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 30px;
+        border-bottom: 2px solid #E6E6E6;
+    }
+
+    .content {
+        flex: 1;
+        padding: 30px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin: 0 0 20px 10px;
+        padding-left: 12px;
+        width: calc(100% - 10px);
+    }
+
+    .section-title-sidebar {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .profile-image img {
+        max-width: 150px;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .summary p {
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .contact-list li {
+        margin-bottom: 8px;
+    }
+
+    .home-title {
+        font-size: 36px;
+    }
+
+    .home-subtitle {
+        font-size: 16px;
+    }
+
+    .home-link {
+        font-size: 22px;
+        padding: 12px 24px;
+    }
+
+    .home-navigation {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 20px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        padding: 8px 12px;
+        margin: 0 0 15px 8px;
+        padding-left: 12px;
+        width: calc(100% - 8px);
+    }
+
+    .section-title-sidebar {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .profile-image img {
+        max-width: 120px;
+    }
+
+    .summary p {
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .job-title,
+    .degree-title,
+    .skill-category {
+        font-size: 11px;
+    }
+
+    .job-description li,
+    .subjects li,
+    .skill-list li {
+        font-size: 11px;
+    }
+
+    .contact-list li {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+
+    .home-content {
+        padding: 20px;
+    }
+
+    .home-title {
+        font-size: 28px;
+    }
+
+    .home-subtitle {
+        font-size: 14px;
+    }
+
+    .home-link {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .home-navigation {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .page-header {
+        margin-bottom: 20px;
+    }
+}

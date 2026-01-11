@@ -1,0 +1,25 @@
+/* ===========================
+   LAYOUT: Two-Column Flex
+   =========================== */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex: 0 0 27%;
+    background-color: #E6E6E6;
+    padding: 40px 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px 40px 40px 30px;
+    overflow-y: auto;
+}

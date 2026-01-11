@@ -3,12 +3,43 @@
  * CV Interactivity
  * 
  * Features:
+ * - Load sidebar from sidebar.html
  * - Expandable/collapsible content sections
  * - Expand All / Collapse All button
  */
 
 (function() {
 	'use strict';
+
+	// ===========================
+	// Load Sidebar Component
+	// ===========================
+	async function loadSidebar() {
+		const sidebarContainer = document.getElementById('sidebar-container');
+		if (!sidebarContainer) return;
+
+		try {
+			// Determine if we're in src/ folder by checking current page path
+			const isInSrc = window.location.pathname.includes('/src/');
+			const sidebarPath = isInSrc ? 'sidebar.html' : 'src/sidebar.html';
+			
+			const response = await fetch(sidebarPath);
+			if (!response.ok) throw new Error(`HTTP ${response.status}`);
+			const html = await response.text();
+			sidebarContainer.innerHTML = html;
+		} catch (error) {
+			console.error('Error loading sidebar:', error);
+			// Fallback: show error message
+			sidebarContainer.innerHTML = '<p style="padding: 20px; color: #999;">Sidebar unavailable</p>';
+		}
+	}
+
+	// Load sidebar when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', loadSidebar);
+	} else {
+		loadSidebar();
+	}
 
 	// ===========================
 	// Expandable Details Component
@@ -88,4 +119,3 @@
 	setupExpandableDetails();
 
 })();
-

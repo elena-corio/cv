@@ -1,5 +1,10 @@
 module.exports = {
   testEnvironment: 'jsdom',
+  roots: ['<rootDir>/tests', '<rootDir>/src'],
+  testMatch: [
+    '**/tests/**/*.test.js',
+    '**/?(*.)+(spec|test).js'
+  ],
   collectCoverageFrom: [
     'src/js/**/*.js',
     '!src/js/**/*.test.js'
@@ -11,9 +16,5 @@ module.exports = {
       lines: 50,
       statements: 50
     }
-  },
-  testMatch: [
-    'tests/**/*.test.js',
-    'src/**/*.test.js'
-  ]
+  }
 };

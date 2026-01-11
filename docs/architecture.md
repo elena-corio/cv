@@ -2,16 +2,23 @@
 
 ## Overview
 
-This is a **static website** (no build tools, no server-side logic). All rendering happens in the browser using vanilla HTML, CSS, and JavaScript.
+This is a **static website** (no build tools, no server-side logic). All rendering happens in the browser using vanilla HTML, CSS, and JavaScript. CSS is organized into modular files that are imported via `main.css`.
 
 ```
 Client Browser
     ↓
 index.html (markup structure)
     ↓
-css/styles.css (visual design, layout, responsive)
+assets/css/main.css (imports modular stylesheets)
+    ├── global.css
+    ├── layout.css
+    ├── sidebar.css
+    ├── components.css
+    ├── sections.css
+    ├── responsive.css
+    └── print.css
     ↓
-js/script.js (DOM manipulation, interactivity)
+assets/js/script.js (DOM manipulation, interactivity)
 ```
 
 ---
@@ -21,38 +28,31 @@ js/script.js (DOM manipulation, interactivity)
 | Layer | Tech | Purpose |
 |-------|------|---------|
 | **Markup** | HTML5 | Semantic structure, accessibility |
-| **Styling** | CSS3 | Layout (flexbox), typography, responsive design, print |
-| **Scripting** | JavaScript (ES6+) | Print, clipboard, utilities |
+| **Styling** | CSS3 (modular) | Layout (flexbox), typography, responsive design, print |
+| **Scripting** | JavaScript (ES6+) | Expandable sections, sidebar loading, interactivity |
 | **Version Control** | Git | Track changes, history |
 | **Documentation** | Markdown | Specs, logs, guides |
 
 ---
 
-## Overview
+## Modular CSS Architecture
 
-This is a **static website** (no build tools required, but npm scripts available). All rendering happens in the browser using vanilla HTML, CSS, and JavaScript.
-
+**main.css** (Master stylesheet):
+```css
+@import url('global.css');      /* Reset, base styles, typography */
+@import url('layout.css');      /* Container, sidebar, content flex layout */
+@import url('sidebar.css');     /* Profile image, name, title, contact */
+@import url('components.css');  /* Buttons, navigation, expandable sections */
+@import url('sections.css');    /* Experience, Education, Skills, Achievements */
+@import url('responsive.css');  /* Media queries for 768px, 480px breakpoints */
+@import url('print.css');       /* Print styles for PDF export */
 ```
-Client Browser
-    ↓
-index.html (markup structure)
-    ↓
-styles.css (visual design, layout, responsive)
-    ↓
-script.js (DOM manipulation, interactivity)
-```
 
----
-
-## Technology Stack
-
-| Layer | Tech | Purpose |
-|-------|------|---------|
-| **Markup** | HTML5 | Semantic structure, accessibility |
-| **Styling** | CSS3 | Layout (flexbox), typography, responsive design, print |
-| **Scripting** | JavaScript (ES6+) | Expandable sections, interactivity |
-| **Version Control** | Git | Track changes, history |
-| **Documentation** | Markdown | Specs, logs, guides |
+**Rationale:**
+- **Separation of concerns**: Each file handles one aspect of styling
+- **Maintainability**: Easier to find and modify specific styles
+- **Scalability**: Simple to add new modules as project grows
+- **No build step required**: @import works natively in modern browsers
 
 ---
 
@@ -60,30 +60,119 @@ script.js (DOM manipulation, interactivity)
 
 ```
 cv/
-├── index.html              # Main document (structure & content)
-├── styles.css              # All styling (layout, colors, typography)
-├── script.js               # Interactivity (expandable sections, etc.)
+├── index.html              # Homepage (entry point - web standard)
+├── src/
+│   ├── cv.html            # CV page (experience, education, achievements, skills)
+│   ├── portfolio.html     # Portfolio page (placeholder for future content)
+│   └── sidebar.html       # Shared sidebar component (loaded via JavaScript)
 ├── assets/
+│   ├── css/
+│   │   ├── main.css       # Main stylesheet (imports all modular CSS files)
+│   │   ├── global.css     # Reset, typography, and global styles
+│   │   ├── layout.css     # Two-column flexbox layout
+│   │   ├── sidebar.css    # Sidebar styling (profile, contact, summary)
+│   │   ├── components.css # Reusable components (buttons, navigation, expandable sections)
+│   │   ├── sections.css   # Content sections (experience, education, skills, achievements)
+│   │   ├── responsive.css # Media queries for tablets and mobile
+│   │   └── print.css      # Print stylesheet for PDF export
+│   ├── js/
+│   │   └── script.js      # Interactivity (sidebar loading, expandable sections)
 │   └── images/
-│       ├── picture.jpg     # Profile photo
-│       └── web.jpg         # Design reference mockup
+│       ├── picture.jpg    # Profile photo
+│       └── web.jpg        # Design reference mockup
 ├── tests/
-│   └── cv.test.js          # Jest unit tests
+│   └── cv.test.js         # Jest unit tests
 ├── docs/
-│   ├── prompt.md           # Design requirements & decisions
-│   ├── log.md              # Development log
-│   ├── features.md         # Feature list & roadmap
-│   ├── design.md           # Design specifications
-│   └── architecture.md     # This file (technical design)
-├── .gitignore              # Git ignore rules
-├── .eslintrc.js            # ESLint config
-├── .prettierrc.json        # Prettier formatting config
-├── jest.config.js          # Jest testing config
-├── package.json            # Project metadata & npm scripts
-├── package-lock.json       # Locked dependency versions
-├── README.md               # Project overview & getting started
-└── LICENSE                 # MIT License
+│   ├── prompt.md          # Design requirements & decisions
+│   ├── log.md             # Development log
+│   ├── features.md        # Feature list & roadmap
+│   ├── design.md          # Design specifications
+│   └── architecture.md    # This file (technical design)
+├── util/
+│   └── appendLog.js       # Utility for logging
+├── .gitignore             # Git ignore rules
+├── .eslintrc.js           # ESLint config
+├── .prettierrc.json       # Prettier formatting config
+├── jest.config.js         # Jest testing config
+├── package.json           # Project metadata & npm scripts
+├── package-lock.json      # Locked dependency versions
+├── README.md              # Project overview & getting started
+└── LICENSE                # MIT License
 ```
+
+### Page Structure
+
+- **index.html** (Home - Root)
+  - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
+  - Content: welcome message + CV/PORTFOLIO navigation links
+  - Purpose: Entry point, navigation hub
+  - Navigation paths: `src/cv.html` and `src/portfolio.html`
+
+- **src/cv.html** (CV Page)
+  - Sidebar: loaded dynamically from sidebar.html via JavaScript
+  - Content: expandable sections (Experience, Education, Achievements, Skills)
+  - Navigation: Home button back to `../index.html`
+  - Purpose: Display full CV with collapsible sections
+
+- **src/portfolio.html** (Portfolio Page)
+  - Sidebar: loaded dynamically from sidebar.html via JavaScript
+  - Content: placeholder for portfolio projects
+  - Navigation: Home button back to `../index.html`
+  - Purpose: Dedicated portfolio showcase page
+
+- **src/sidebar.html** (Shared Component)
+  - Reusable sidebar markup (profile, summary, contact)
+  - Loaded dynamically into all pages using JavaScript fetch()
+  - Avoids code duplication across all HTML pages
+  - Maintains single source of truth for sidebar content
+  - Images reference `assets/` folder (relative to root)
+
+---
+
+## JavaScript Architecture
+
+### Sidebar Loading
+```javascript
+// script.js loads sidebar.html dynamically
+async function loadSidebar() {
+  const sidebarContainer = document.getElementById('sidebar-container');
+  
+  // Detect if we're in src/ folder
+  const isInSrc = window.location.pathname.includes('/src/');
+  const sidebarPath = isInSrc ? 'sidebar.html' : 'src/sidebar.html';
+  
+  const response = await fetch(sidebarPath);
+  sidebarContainer.innerHTML = await response.text();
+}
+```
+
+**Why this approach?**
+- DRY principle: Single sidebar.html file instead of repeating in 3 HTML files
+- Easier maintenance: Update sidebar once, changes appear everywhere
+- No build tools needed: Pure vanilla JavaScript with fetch() API
+- Path detection: Automatically resolves correct path from root or src/ folder
+- Graceful fallback: Shows error message if fetch fails
+
+**Requires HTTP server:**
+- Fetch API doesn't work with `file://` protocol
+- Run `npm start` or `npx http-server . -p 8000` to serve locally
+
+---
+
+## Navigation Flow
+
+```
+User lands on site
+    ↓
+index.html (Home)
+    ├→ Click "CV" → cv.html
+    │  └→ Click "← Home" → index.html
+    │
+    └→ Click "PORTFOLIO" → portfolio.html
+       └→ Click "← Home" → index.html
+```
+
+All links use relative paths (no absolute URLs), making the site portable.
 
 ---
 

@@ -1,0 +1,26 @@
+/* ===========================
+   GLOBAL & RESET
+   =========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure no italic anywhere */
+html, body, * {
+    font-style: normal !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #000;
+    background-color: #fff;
+}

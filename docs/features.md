@@ -4,17 +4,28 @@
 
 ### ✅ Layout & Structure
 - **Refined two-column layout** (27% sidebar, 73% main content)
+- **Multi-page architecture** (index.html home, cv.html CV page, portfolio.html placeholder)
 - **Centered profile section** (grayscale image no-crop, name & title centered below)
 - **Pinned contact section** (bottom of sidebar using flexbox)
-- **Professional spacing** (20px gaps after headers, aligned text, 16px bullet indent)
+- **Professional spacing** (20px gaps after headers, aligned text, 24px bullet indent)
 - **Full-width header bars** (#F0F0F0 background with grey typography)
+- **Responsive homepage** (centered welcome message + navigation links on all screen sizes)
+
+### ✅ Navigation
+- **Homepage (index.html)** — Entry point with CV & PORTFOLIO links
+- **CV Page (cv.html)** — Full CV with collapsible sections + Home button
+- **Portfolio Page (portfolio.html)** — Placeholder + Home button
+- **Link styling** — Hover effects (underline), visited state (darker color)
+- **Relative URLs** — All links use relative paths for portability
 
 ### ✅ Typography & Styling
 - **Futura font stack** with weight hierarchy (Heavy for headers, Light for body)
+- **Improved readability** (base font 13px, line-height 1.7)
 - **No italics** globally (modern, clean aesthetic)
 - **Proficiency badges** in grey inline text
 - **Certification dates** in grey inline spans
 - **Careful alignment** (headers aligned with bullet text, centered sidebar content)
+- **Mobile-optimized fonts** (adjusts heading sizes for tablet/mobile)
 
 ### ✅ Content Sections
 - **Experience** (3 roles with descriptions including Research Student)
@@ -24,12 +35,27 @@
   - Technologies: Parametric & Visual Scripting, Programming, Environmental Analysis, Structural Analysis, Graphic & Communication, Productivity
 - **Achievements** (Certifications with dates, Publications, Awards)
 
+### ✅ Interactivity
+- **Expandable sections** (Experience, Education, Achievements, Skills with +/- toggle icons)
+- **"Expand All" button** — Collapse/expand all sections at once
+- **Section persistence** — Smooth animations on expand/collapse
+- **Print functionality** — Ctrl+P keyboard support
+- **Clipboard copy** — Email copy-to-clipboard utility
+
 ### ✅ Visual Polish
 - **Greyscale contact icons** with opacity filter
 - **Greyscale profile image** with `object-fit: contain` (no cropping)
 - **Proficiency levels** in muted grey (#999)
 - **Dates/metadata** subtly grey (#888)
-- **Responsive breakpoints** (768px tablet, 480px mobile)
+- **Link hover effects** — Bottom border underline on hover
+- **Visited link styling** — Links appear darker after clicking
+
+### ✅ Responsive Design
+- **Tablet breakpoint (768px)** — Adjusted font sizes, consistent header scaling
+- **Mobile breakpoint (480px)** — Vertical layout, touch-friendly sizing
+- **CONTACT header consistency** — Matches section header sizes on all breakpoints
+- **Text alignment** — Left-aligned on mobile for better readability
+- **Navigation links** — Stack vertically on mobile
 
 ### ✅ Print & Export
 - **Print-optimized CSS** (`@media print`)
@@ -44,7 +70,7 @@
 
 ### ✅ Documentation
 - `README.md` — Quick start and overview
-- `docs/architecture.md` — Technical design with flexbox layout details
+- `docs/architecture.md` — Technical design with multi-page navigation
 - `docs/design.md` — Design specification and rationale
 - `docs/log.md` — Detailed development log with all changes
 - `docs/features.md` — This file (roadmap)

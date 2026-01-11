@@ -168,9 +168,64 @@
   - Used Chrome DevTools device toolbar to verify layout on different screen sizes
   - Confirmed consistency between tablet (768px) and mobile (480px) breakpoints
 
+### Phase 6: Multi-Page Navigation & Homepage
+- **Created homepage** (`index.html`):
+  - Entry point for the website (web standard)
+  - Same sidebar layout (profile, summary, contact)
+  - Centered welcome section with title and subtitle
+  - Two clickable navigation links: CV and PORTFOLIO
+  - Links change color on hover and visited states
+  - Fully responsive (centered layout on mobile)
+
+- **Created CV page** (`cv.html`):
+  - Contains all experience, education, achievements, and skills sections
+  - Expandable/collapsible sections with toggle buttons
+  - Home button at top to return to index.html
+  - Same sidebar layout as homepage
+
+- **Created portfolio page** (`portfolio.html`):
+  - Placeholder content ("Portfolio coming soon...")
+  - Home button for easy navigation back to index.html
+  - Same sidebar layout as other pages
+
+- **CSS additions:**
+  - `.page-header` and `.home-button` - Navigation styling for back button
+  - `.home-content`, `.home-title`, `.home-subtitle` - Homepage layout
+  - `.home-navigation` and `.home-link` - Link styling with hover/visited states
+  - Responsive breakpoints for home page (tablet 768px, mobile 480px)
+  - Link hover effect: underline appears on bottom border
+  - Visited links appear in darker grey (#666) for visual feedback
+
+- **Navigation architecture:**
+  - `index.html` (home) → links to `cv.html` and `portfolio.html`
+  - `cv.html` (CV) → Home button links back to `index.html`
+  - `portfolio.html` (portfolio) → Home button links back to `index.html`
+  - All navigation uses relative links (no absolute URLs needed)
+
+- **Deleted:** Old `home.html` file (consolidated into `index.html`)
+
+### Phase 7: Code Refactoring - DRY Sidebar Component
+- **Extracted reusable sidebar:**
+  - Created `sidebar.html` with shared sidebar markup
+  - Removed duplicate sidebar code from index.html, cv.html, and portfolio.html
+  - Replaced with `<div id="sidebar-container"></div>` placeholder in all pages
+
+- **Implemented dynamic sidebar loading:**
+  - Added `loadSidebar()` async function to script.js
+  - Uses `fetch()` API to load sidebar.html and inject into DOM
+  - Includes error handling with fallback message
+  - Runs automatically when page loads
+
+- **Benefits:**
+  - DRY principle: Single source of truth for sidebar content
+  - Easier maintenance: Update sidebar once, changes everywhere
+  - No build tools needed: Pure vanilla JavaScript
+  - Graceful degradation: Shows error message if fetch fails
+
 ## Current Status
-✅ **Complete:** Clean, functional CV with improved responsive design and mobile optimization.
-✅ **Ready to Commit:** All typography, spacing, and alignment changes documented and tested.
+✅ **Complete:** Multi-page CV website with DRY component architecture and responsive design.
+✅ **Refactored:** Sidebar extracted to separate file, loaded dynamically
+✅ **Ready to Commit:** All pages refactored, tested, and fully documented.
 
 ## Next Steps (Future)
 - [ ] Test locally with `npm install && npm start`
@@ -221,3 +276,54 @@
 - **Updated documentation:**
   - `docs/architecture.md` — New folder structure, updated workflow
   - `docs/log.md` — This file, added Phase 4 notes
+
+---
+
+## Session 3: 2026-01-11
+
+### Phase 7: Project Structure Optimization & CSS Modularization
+- **Folder Reorganization:**
+  - Created ssets/css/ folder for modular stylesheets
+  - Created ssets/js/ folder for JavaScript files
+  - Moved styles.css  ssets/css/main.css (now imports modular CSS)
+  - Moved script.js  ssets/js/script.js
+  - Deleted old root-level styles.css and script.js
+
+- **CSS Modularization:**
+  - Split monolithic styles.css (~800 lines) into 7 focused modules:
+    - global.css - Reset, typography, base styles (22 lines)
+    - layout.css - Flexbox container, sidebar, content (20 lines)
+    - sidebar.css - Profile image, contact, summary styles (65 lines)
+    - components.css - Navigation, buttons, expandable sections (125 lines)
+    - sections.css - Experience, Education, Skills, Achievements (140 lines)
+    - esponsive.css - Media queries for 768px and 480px (100 lines)
+    - print.css - Print styles for PDF (15 lines)
+  - Main CSS file uses @import to bundle modules
+  - All existing styles preserved, no functionality changes
+
+- **Path Updates:**
+  - Updated index.html: styles.css  ssets/css/main.css, script.js  ssets/js/script.js
+  - Updated src/cv.html: ../styles.css  ../assets/css/main.css, ../script.js  ../assets/js/script.js
+  - Updated src/portfolio.html: ../styles.css  ../assets/css/main.css, ../script.js  ../assets/js/script.js
+
+- **Documentation Updates:**
+  - Updated rchitecture.md with new file structure and CSS modularization explanation
+  - Added "Modular CSS Architecture" section
+  - Updated "File Structure & Responsibilities" with new folder layout
+
+- **Benefits Achieved:**
+  - Improved maintainability: Find and modify specific styles easily
+  - Better organization: Logical separation of concerns
+  - Scalability: Easy to add new CSS modules as project grows
+  - No build tools required: @import works natively in modern browsers
+  - Same visual output: All styles preserved exactly
+
+### Tests Updated
+- **Refactored** 	ests/cv.test.js to align with current project structure
+  - Removed outdated print/clipboard functionality tests
+  - Added DOM structure tests (container, sidebar, content, buttons)
+  - Added expandable sections tests (headers, icons, content, toggle behavior)
+  - Added CSS modularization verification test
+  - Added responsive design tests
+  - Added sidebar component tests (profile, title, contact section)
+  - All tests now validate actual current functionality

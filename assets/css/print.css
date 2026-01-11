@@ -1,0 +1,27 @@
+/* ===========================
+   PRINT STYLES
+   =========================== */
+
+@media print {
+    body {
+        background: #fff;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .sidebar {
+        background-color: #E6E6E6;
+        page-break-inside: avoid;
+    }
+
+    .content {
+        background-color: #fff;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}

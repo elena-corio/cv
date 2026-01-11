@@ -1,0 +1,120 @@
+/* ===========================
+   SIDEBAR STYLING
+   =========================== */
+
+/* Profile Image */
+.profile-image {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 220px;
+    max-height: 260px;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    display: block;
+}
+
+/* Name & Title */
+.profile-header {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.name {
+    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+    text-transform: none;
+}
+
+.title {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    margin: 0;
+    text-transform: none;
+}
+
+/* Professional Summary */
+.summary {
+    margin-bottom: 30px;
+}
+
+.summary p {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Contact Section */
+.section-title-sidebar {
+    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.contact .icon {
+    margin-right: 8px;
+    min-width: 16px;
+    text-align: center;
+    opacity: 0.6;
+    color: #555;
+    filter: grayscale(100%) brightness(0.8);
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+}
+
+.icon {
+    margin-right: 8px;
+    min-width: 16px;
+    text-align: center;
+    opacity: 0.6;
+    color: #555;
+    filter: grayscale(100%) brightness(0.8);
+}
+
+.contact-detail {
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* References Note */
+.references-note {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.references-note p {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: #555;
+    text-align: center;
+}

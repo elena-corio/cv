@@ -2,10 +2,10 @@
   "name": "elena-corio-cv",
   "version": "1.0.0",
   "description": "Professional CV website for MA Elena Corio - Computational Designer",
-  "main": "src/html/index.html",
+  "main": "index.html",
   "scripts": {
-    "start": "http-server src -p 8000 -o",
-    "dev": "http-server src -p 8000 -c-1",
+    "start": "http-server . -p 8000 -o",
+    "dev": "http-server . -p 8000 -c-1",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
@@ -30,9 +30,9 @@
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.2.0",
     "prettier": "^3.0.0",
     "stylelint": "^15.11.0",
     "stylelint-config-standard": "^34.0.0"
-  },
-  "dependencies": {}
+  }
 }

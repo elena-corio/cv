@@ -1,0 +1,13 @@
+/* ===========================
+   CV STYLES
+   Elena Corio - Computational Designer
+   Main stylesheet with modular imports
+   =========================== */
+
+@import url('global.css');
+@import url('layout.css');
+@import url('sidebar.css');
+@import url('components.css');
+@import url('sections.css');
+@import url('responsive.css');
+@import url('print.css');
