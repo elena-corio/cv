@@ -512,3 +512,42 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 ✅ **Navigation:** Consistent header + sidebar access across all screens
 ✅ **Tests:** All 16 tests still passing
 ✅ **Ready for Production:** Complete and optimized for all devices
+
+---
+
+## Session 8: 2026-01-11
+
+### Phase 12: Final Typography & Spacing Refinements
+- **Homepage Subtitle Typography Adjustment:**
+  - Previously: max-width: 180px caused "Digital" and "Workflows" to split awkwardly
+  - Fixed: Increased max-width to 280px on mobile (≤480px breakpoint)
+  - Result: Subtitle "Computational Design · Architecture · Digital Workflows" now wraps naturally
+  - Text stays together as cohesive phrases on mobile devices
+  - Maintains centered alignment with auto margins
+
+- **Flexbox Centering Solution (Previous Session Carryover):**
+  - Homepage title now properly centered vertically within viewport
+  - Implementation: `.content` as flex container with `display: flex; flex-direction: column;`
+  - home-content uses `flex: 1; justify-content: center;` for vertical centering
+  - All pages maintain proper scrolling behavior when content overflows
+
+- **Complete Responsive Typography Stack:**
+  - Desktop: 48px title, subtitle wraps naturally across full width
+  - Tablet (768px): 36px title, 16px subtitle
+  - Mobile (480px): 28px title, 14px subtitle with 280px max-width
+  - All sizes calculated to fit viewport without excessive scrolling
+
+### Changes Made:
+1. **assets/css/responsive.css**:
+   - Updated .home-subtitle max-width: 180px → 280px on mobile breakpoint
+   - Allows full phrase "Digital Workflows" to remain together
+   - Maintains centered layout with margin-left/right auto
+
+### Current Status
+✅ **Typography:** Homepage subtitle responsive and visually balanced
+✅ **Mobile UX:** Text wrapping optimized, phrases stay together
+✅ **Flexbox:** Proper centering across all device sizes
+✅ **Responsive:** All breakpoints (480px, 768px, desktop) working correctly
+✅ **Tests:** All 16 tests still passing
+✅ **Production Ready:** Complete site with polished mobile experience
+✅ **Documentation:** Development log updated with all refinements

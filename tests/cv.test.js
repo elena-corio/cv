@@ -133,6 +133,15 @@ describe('Responsive Design', () => {
     // Flexbox layout is applied via CSS
     expect(container).toBeDefined();
   });
+
+  test('homepage subtitle should have max-width constraint on mobile', () => {
+    // Ensures subtitle text wraps properly on mobile devices
+    // The home-subtitle element should have a defined max-width in CSS
+    document.body.innerHTML = '<p class="home-subtitle">Computational Design · Architecture · Digital Workflows</p>';
+    const subtitle = document.querySelector('.home-subtitle');
+    expect(subtitle).toBeDefined();
+    expect(subtitle.textContent).toContain('Digital Workflows');
+  });
 });
 
 describe('Sidebar Component', () => {

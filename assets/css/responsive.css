@@ -73,7 +73,7 @@
     }
 
     .summary p {
-        text-align: left;
+        text-align: justify;
         padding: 0 10px;
     }
 
@@ -175,7 +175,7 @@
 
     .summary p {
         font-size: 11px;
-        text-align: left;
+        text-align: justify;
     }
 
     .job-title,
@@ -205,6 +205,9 @@
 
     .home-subtitle {
         font-size: 14px;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .home-link {
