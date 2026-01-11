@@ -4,6 +4,11 @@
 
 .page-header {
     margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .home-button {
@@ -28,6 +33,25 @@
 .home-button:active {
     background-color: #D0D0D0;
     color: #000;
+}
+
+.home-link-text {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.home-link-text:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.home-link-text:active {
+    color: #666;
 }
 
 /* ===========================
@@ -112,11 +136,6 @@
 }
 
 /* Expand All / Collapse All Controls */
-.expand-all-controls {
-    margin-bottom: 25px;
-    text-align: right;
-}
-
 .expand-all-button {
     font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
     font-size: 12px;
@@ -141,6 +160,20 @@
 
 .expand-all-button.expanded {
     /* Button state when all sections are expanded */
+}
+
+.expand-all-link {
+    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.expand-all-link:hover {
+    color: #333;
+    text-decoration: underline;
 }
 
 /* Expandable Header Styles */

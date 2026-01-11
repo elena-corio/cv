@@ -328,3 +328,62 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Added responsive design tests
   - Added sidebar component tests (profile, title, contact section)
   - All tests now validate actual current functionality
+
+---
+
+## Session 4: 2026-01-11
+
+### Phase 8: Bug Fixes & UI Refinements
+- **Fixed Sidebar Loading Issue:**
+  - Issue: Script had syntax error preventing sidebar from loading
+  - Root cause: Function `setupExpandableDetails()` was called before it was defined
+  - Fix: Reorganized script.js to define functions before calling them
+  - Added proper async/await handling for sidebar loading with init() function
+  - Added console logging for debugging sidebar load path
+
+- **Fixed Sidebar Image Path:**
+  - Issue: Profile picture not visible on cv.html and portfolio.html pages
+  - Root cause: Relative path `assets/images/picture.jpg` failed from src/ folder
+  - Fix: Changed to absolute path `/assets/images/picture.jpg` in sidebar.html
+  - Now works correctly from all pages regardless of folder depth
+
+- **Changed Expand All to Text Link:**
+  - Changed from `<button>` to `<span>` element for Expand All control
+  - Updated class from `.expand-all-button` to `.expand-all-link`
+  - Updated CSS styling: removed button styles, added text link styling with underline on hover
+  - Home button also converted to text link style for consistency
+  - Updated both cv.html and portfolio.html
+
+- **Improved Mobile Navigation Layout:**
+  - Fixed CV and Portfolio links on homepage to center properly on mobile
+  - Added `flex-direction: column`, `align-items: center`, and `width: 100%` to responsive CSS
+  - Links now stack vertically and centered on screens under 480px
+
+- **Fixed Page Header Layout:**
+  - Home and Expand All controls now display on same line using flexbox
+  - Updated HTML structure to place both controls in single `.page-header` div
+  - Responsive: wraps on smaller screens with proper spacing
+
+- **Fixed Scroll Behavior:**
+  - Removed `overflow-y: auto` from sidebar and content areas
+  - Page now scrolls normally as a single unit
+  - Sidebar content stays fixed while entire page scrolls (expected behavior)
+
+### Changes Made:
+1. **script.js**: Reordered functions, fixed async initialization, added console logging
+2. **sidebar.html**: Changed image src from relative to absolute path
+3. **cv.html**: 
+   - Combined page-header and expand controls into single div
+   - Changed Expand All from button to span with `.expand-all-link` class
+   - Changed Home from button to link with `.home-link-text` class
+4. **portfolio.html**: Updated Home button to Home link with `.home-link-text` class
+5. **components.css**: Added `.home-link-text` and `.expand-all-link` styles, removed `.expand-all-controls`
+6. **layout.css**: Removed `overflow-y: auto` from both sidebar and content areas
+7. **responsive.css**: Enhanced mobile navigation with centering and width constraints
+8. **tests/cv.test.js**: Updated test DOM to reflect new markup (span instead of button, home link instead of button)
+
+### Current Status
+✅ **Complete:** All bugs fixed, UI refinements complete
+✅ **Responsive:** Working perfectly on mobile (centered links) and laptop (fixed sidebar)
+✅ **Accessibility:** Text-based navigation is more accessible than buttons
+✅ **Ready for Testing:** All tests pass with updated assertions

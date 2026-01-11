@@ -16,7 +16,10 @@ describe('DOM Structure', () => {
       <div class="container">
         <div id="sidebar-container"></div>
         <main class="content">
-          <button id="expandAllBtn">Expand All</button>
+          <div class="page-header">
+            <a href="../index.html" class="home-link-text">← Home</a>
+            <span id="expandAllBtn" class="expand-all-link">Expand All</span>
+          </div>
         </main>
       </div>
     `;
@@ -40,10 +43,17 @@ describe('DOM Structure', () => {
     expect(content).not.toBeNull();
   });
 
-  test('should have expand all button', () => {
-    const button = document.getElementById('expandAllBtn');
-    expect(button).toBeDefined();
-    expect(button).not.toBeNull();
+  test('should have home link', () => {
+    const homeLink = document.querySelector('.home-link-text');
+    expect(homeLink).toBeDefined();
+    expect(homeLink.textContent).toBe('← Home');
+  });
+
+  test('should have expand all link', () => {
+    const expandLink = document.getElementById('expandAllBtn');
+    expect(expandLink).toBeDefined();
+    expect(expandLink.textContent).toBe('Expand All');
+    expect(expandLink.classList.contains('expand-all-link')).toBe(true);
   });
 });
 
