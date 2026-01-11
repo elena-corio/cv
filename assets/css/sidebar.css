@@ -45,7 +45,7 @@
 
 /* Professional Summary */
 .summary {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .summary p {
@@ -107,7 +107,9 @@
 /* References Note */
 .references-note {
     margin-top: 40px;
+    margin-bottom: 0;
     padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid #ccc;
 }
 

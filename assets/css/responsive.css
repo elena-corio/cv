@@ -2,104 +2,52 @@
    RESPONSIVE DESIGN
    =========================== */
 
-@media (max-width: 768px) {
+/* Small laptops / larger tablets (768px to 1024px width) */
+@media (min-width: 769px) and (max-width: 1024px) {
     #sidebar-container {
-        width: 100%;
-        flex: 0 0 100%;
-        max-height: none;
-    }
-
-    .content {
-        width: 100%;
-    }
-
-    .header {
-        padding: 15px 0;
-        margin-bottom: 20px;
-    }
-
-    .header-nav {
-        gap: 20px;
-    }
-
-    .header-link {
-        font-size: 12px;
-        padding: 6px 0;
-    }
-
-    .expand-all-link {
-        font-size: 11px;
-        margin-left: auto;
-    }
-
-    .container {
-        flex-direction: column;
+        padding: 30px 20px;
     }
 
     .sidebar {
-        flex: 0 0 auto;
-        width: 100%;
-        padding: 30px;
-        border-bottom: 2px solid #E6E6E6;
+        padding: 30px 20px;
     }
 
-    .content {
-        flex: 1;
-        padding: 30px;
+    .profile-image img {
+        max-width: 140px;
     }
 
-    .section-title {
+    .name {
         font-size: 20px;
-        margin: 0 0 20px 10px;
-        padding-left: 12px;
-        width: calc(100% - 10px);
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .summary p {
+        font-size: 11px;
     }
 
     .section-title-sidebar {
         font-size: 20px;
-        margin-bottom: 15px;
-    }
-
-    .profile-image img {
-        max-width: 160px;
-    }
-
-    .name {
-        font-size: 24px;
-    }
-
-    .title {
-        font-size: 14px;
-    }
-
-    .summary p {
-        text-align: justify;
-        padding: 0 10px;
+        margin-bottom: 12px;
     }
 
     .contact-list li {
-        margin-bottom: 8px;
+        font-size: 11px;
+        margin-bottom: 6px;
     }
 
     .home-title {
-        font-size: 36px;
+        font-size: 40px;
     }
 
     .home-subtitle {
-        font-size: 16px;
-    }
-
-    .home-link {
-        font-size: 22px;
-        padding: 12px 24px;
-    }
-
-    .home-navigation {
-        gap: 30px;
+        font-size: 14px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
@@ -142,6 +90,9 @@
     .sidebar {
         padding: 20px;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .content {
@@ -170,12 +121,16 @@
     }
 
     .profile-image img {
-        max-width: 100px;
+        max-width: 140px;
     }
 
     .summary p {
         font-size: 11px;
         text-align: justify;
+    }
+
+    .summary {
+        margin-bottom: 50px;
     }
 
     .job-title,

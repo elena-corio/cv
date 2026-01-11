@@ -114,9 +114,9 @@
 		closeBtn.style.right = '5px';
 		closeBtn.style.zIndex = '1001';
 		
-		// Check if we should show hamburger (mobile only)
-		function updateHamburgerVisibility() {
-			if (window.innerWidth <= 480) {
+// Check if we should show hamburger (mobile/tablet)
+	function updateHamburgerVisibility() {
+		if (window.innerWidth <= 768) {
 				if (sidebarContainer.classList.contains('open')) {
 					hamburgerBtn.style.display = 'none';
 					closeBtn.style.display = 'block';
@@ -153,9 +153,7 @@
 
 		// Close sidebar when clicking outside
 		document.addEventListener('click', (e) => {
-			if (window.innerWidth <= 480 && 
-				sidebarContainer.classList.contains('open') &&
-				!sidebarContainer.contains(e.target) && 
+		if (window.innerWidth <= 768 && 
 				!hamburgerBtn.contains(e.target) &&
 				!closeBtn.contains(e.target)) {
 				sidebarContainer.classList.remove('open');
