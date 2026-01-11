@@ -296,7 +296,8 @@
     - sidebar.css - Profile image, contact, summary styles (65 lines)
     - components.css - Navigation, buttons, expandable sections (125 lines)
     - sections.css - Experience, Education, Skills, Achievements (140 lines)
-    - esponsive.css - Media queries for 768px and 480px (100 lines)
+    - 
+esponsive.css - Media queries for 768px and 480px (100 lines)
     - print.css - Print styles for PDF (15 lines)
   - Main CSS file uses @import to bundle modules
   - All existing styles preserved, no functionality changes
