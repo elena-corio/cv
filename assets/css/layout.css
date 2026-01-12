@@ -32,6 +32,7 @@
     background-color: #fff;
     padding: 40px 40px 40px 30px;
     overflow-y: auto;
+    scrollbar-gutter: stable;
     display: flex;
     flex-direction: column;
 }
