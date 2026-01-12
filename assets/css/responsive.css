@@ -125,9 +125,18 @@
         font-size: 12px;
     }
 
-    .contact-list li {
-        font-size: 11px;
-        margin-bottom: 6px;
+    .contact-buttons {
+        gap: 10px;
+    }
+
+    .contact-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-btn svg {
+        width: 20px;
+        height: 20px;
     }
 
     .home-content {
