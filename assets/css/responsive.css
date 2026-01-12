@@ -6,10 +6,12 @@
 @media (min-width: 769px) and (max-width: 1024px) {
     #sidebar-container {
         padding: 25px 15px;
+        flex: 0 0 350px;
     }
 
     .sidebar {
         padding: 25px 15px;
+        flex: 0 0 350px;
     }
 
     .profile-image img {
