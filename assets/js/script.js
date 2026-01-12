@@ -188,10 +188,8 @@
 		}
 
 		try {
-			// Use relative path for local testing, absolute path for GitHub Pages
-			const headerPath = window.location.hostname === 'localhost' 
-				? './components/header.html' 
-				: '/cv/components/header.html';
+			// Use relative path (works for both local and GitHub Pages)
+			const headerPath = './components/header.html';
 			
 			console.log('Loading header from:', headerPath);
 			
@@ -215,10 +213,8 @@
 		if (!sidebarContainer) return;
 
 		try {
-			// Use relative path for local testing, absolute path for GitHub Pages
-			const sidebarPath = window.location.hostname === 'localhost' 
-				? './components/sidebar.html' 
-				: '/cv/components/sidebar.html';
+			// Use relative path (works for both local and GitHub Pages)
+			const sidebarPath = './components/sidebar.html';
 			
 			console.log('Loading sidebar from:', sidebarPath);
 			
@@ -260,10 +256,10 @@
 		}
 		
 		// Show expand all button only on CV page
-		const isOnCVPage = window.location.pathname.includes('/cv.html');
+		const isOnAboutPage = window.location.pathname.includes('/about.html');
 		const expandAllBtn = document.getElementById('expandAllBtn');
 		if (expandAllBtn) {
-			expandAllBtn.style.display = isOnCVPage ? 'inline' : 'none';
+			expandAllBtn.style.display = isOnAboutPage ? 'inline' : 'none';
 		}
 		
 		try {
@@ -285,19 +281,24 @@
 			const page = link.dataset.page;
 			
 			// Determine current page
-			const isHome = pathname.includes('index.html') || pathname === '/' || pathname === '';
-			const isCV = pathname.includes('cv.html');
-			const isPortfolio = pathname.includes('portfolio.html');
+			// Home is active if: index.html is in path, path ends with '/', or path ends with the domain name
+			const isHome = pathname.includes('index.html') || 
+						  pathname === '/' || 
+						  pathname === '' || 
+						  pathname.endsWith('/cv/') ||
+						  pathname.endsWith('/cv');
+			const isAbout = pathname.includes('about.html');
+			const isWork = pathname.includes('work.html');
 			
 			if (page === 'home' && isHome) {
 				link.classList.add('active');
 				console.log('Set HOME as active');
-			} else if (page === 'cv' && isCV) {
+			} else if (page === 'about' && isAbout) {
 				link.classList.add('active');
-				console.log('Set CV as active');
-			} else if (page === 'portfolio' && isPortfolio) {
+				console.log('Set ABOUT as active');
+			} else if (page === 'work' && isWork) {
 				link.classList.add('active');
-				console.log('Set PORTFOLIO as active');
+				console.log('Set WORK as active');
 			}
 		});
 	}

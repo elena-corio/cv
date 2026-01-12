@@ -36,8 +36,8 @@ Convert a static CV design (`web.jpg`) into a responsive HTML/CSS/JS website.
 ```
 cv/
 ├── index.html              # Homepage
-├── cv.html                 # CV page
-├── portfolio.html          # Portfolio page
+├── about.html                 # About page
+├── work.html                 # Work page
 ├── components/             # Reusable components
 │   ├── header.html         # Navigation header
 │   └── sidebar.html        # Sidebar profile

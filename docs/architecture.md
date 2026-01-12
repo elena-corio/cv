@@ -61,8 +61,8 @@ assets/js/script.js (DOM manipulation, interactivity)
 ```
 cv/
 ├── index.html              # Homepage (entry point - web standard)
-├── cv.html                 # CV page (experience, education, achievements, skills)
-├── portfolio.html          # Portfolio page (placeholder for future content)
+├── about.html              # About page (experience, education, achievements, skills)
+├── work.html               # Work page (placeholder for future portfolio content)
 ├── components/
 │   ├── header.html         # Shared navigation header component (loaded via JavaScript)
 │   └── sidebar.html        # Shared sidebar component (loaded via JavaScript)
@@ -107,19 +107,19 @@ cv/
   - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: welcome message + CV/PORTFOLIO navigation links
   - Purpose: Entry point, navigation hub
-  - Navigation paths: `/cv/cv.html` and `/cv/portfolio.html`
+  - Navigation paths: `/cv/about.html` and `/cv/work.html`
 
-- **cv.html** (CV Page - Root)
+- **about.html** (About Page - Root)
   - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: expandable sections (Experience, Education, Achievements, Skills)
   - Navigation: Home button back to `/cv/index.html`
   - Purpose: Display full CV with collapsible sections
 
-- **portfolio.html** (Portfolio Page - Root)
+- **work.html** (Work Page - Root)
   - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: placeholder for portfolio projects
   - Navigation: Home button back to `/cv/index.html`
-  - Purpose: Dedicated portfolio showcase page
+  - Purpose: Dedicated work/portfolio showcase page
 
 - **components/sidebar.html** (Shared Component)
   - Reusable sidebar markup (profile, summary, contact)
@@ -166,10 +166,10 @@ async function loadSidebar() {
 User lands on site
     ↓
 index.html (Home)
-    ├→ Click "CV" → cv.html
+    ├→ Click "WORK" → work.html
     │  └→ Click "← Home" → index.html
     │
-    └→ Click "PORTFOLIO" → portfolio.html
+    └→ Click "ABOUT" → about.html
        └→ Click "← Home" → index.html
 ```
 

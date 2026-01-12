@@ -1,5 +1,33 @@
 # Development Log
 
+## Session 3: 2026-01-12
+
+### Documentation Synchronization & Home Page Fix
+- **Updated** all documentation files to match current implementation:
+  - Changed all Futura references to Inter (Google Fonts)
+  - Updated font weights: Heavy/Light → 400/500/700
+  - Fixed layout percentages: 30/70% → 350px fixed sidebar
+  - Updated responsive breakpoint: 768px + 480px → 768px only (mobile overlay sidebar)
+  - Updated typography sizes to match actual CSS
+
+- **Fixed Home Page Behavior:**
+  - HOME link now defaults to active on root URL (`/cv/` or `/cv`)
+  - Modified `setActiveHeaderLink()` to properly detect home page:
+    - Checks for `index.html`, `/`, empty path, `/cv/`, and `/cv`
+    - Sets HOME as active by default when visiting root
+
+- **Fixed Component Loading Paths:**
+  - Changed header and sidebar fetch paths from conditional logic to simple relative paths (`./components/header.html`, `./components/sidebar.html`)
+  - Now works seamlessly on both localhost and GitHub Pages
+
+- **Testing:**
+  - ✅ Local development server running on http://127.0.0.1:8000
+  - ✅ All CSS files loading correctly
+  - ✅ Component paths resolved properly
+  - ✅ HOME page now active on root visit
+
+---
+
 ## Session 1: 2026-01-08
 
 ### Phase 1: Project Setup & Design Analysis
@@ -177,13 +205,13 @@
   - Links change color on hover and visited states
   - Fully responsive (centered layout on mobile)
 
-- **Created CV page** (`cv.html`):
+- **Created About page** (`about.html`):
   - Contains all experience, education, achievements, and skills sections
   - Expandable/collapsible sections with toggle buttons
   - Home button at top to return to index.html
   - Same sidebar layout as homepage
 
-- **Created portfolio page** (`portfolio.html`):
+- **Created work page** (`work.html`):
   - Placeholder content ("Portfolio coming soon...")
   - Home button for easy navigation back to index.html
   - Same sidebar layout as other pages
@@ -197,9 +225,9 @@
   - Visited links appear in darker grey (#666) for visual feedback
 
 - **Navigation architecture:**
-  - `index.html` (home) → links to `cv.html` and `portfolio.html`
-  - `cv.html` (CV) → Home button links back to `index.html`
-  - `portfolio.html` (portfolio) → Home button links back to `index.html`
+  - `index.html` (home) → links to `about.html` and `work.html`
+  - `about.html` (About) → Home button links back to `index.html`
+  - `work.html` (work) → Home button links back to `index.html`
   - All navigation uses relative links (no absolute URLs needed)
 
 - **Deleted:** Old `home.html` file (consolidated into `index.html`)
@@ -207,7 +235,7 @@
 ### Phase 7: Code Refactoring - DRY Sidebar Component
 - **Extracted reusable sidebar:**
   - Created `sidebar.html` with shared sidebar markup
-  - Removed duplicate sidebar code from index.html, cv.html, and portfolio.html
+  - Removed duplicate sidebar code from index.html, about.html, and work.html
   - Replaced with `<div id="sidebar-container"></div>` placeholder in all pages
 
 - **Implemented dynamic sidebar loading:**
@@ -304,8 +332,8 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 
 - **Path Updates:**
   - Updated index.html: styles.css  ssets/css/main.css, script.js  ssets/js/script.js
-  - Updated cv.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
-  - Updated portfolio.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
+  - Updated about.html: ../styles.css → assets/css/main.css, ../script.js → assets/js/script.js
+  - Updated work.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
 
 - **Documentation Updates:**
   - Updated rchitecture.md with new file structure and CSS modularization explanation
@@ -342,7 +370,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Added console logging for debugging sidebar load path
 
 - **Fixed Sidebar Image Path:**
-  - Issue: Profile picture not visible on cv.html and portfolio.html pages
+  - Issue: Profile picture not visible on about.html and work.html pages
   - Root cause: Relative path `assets/images/picture.jpg` failed from src/ folder
   - Fix: Changed to absolute path `/assets/images/picture.jpg` in sidebar.html
   - Now works correctly from all pages regardless of folder depth
@@ -352,7 +380,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Updated class from `.expand-all-button` to `.expand-all-link`
   - Updated CSS styling: removed button styles, added text link styling with underline on hover
   - Home button also converted to text link style for consistency
-  - Updated both cv.html and portfolio.html
+  - Updated both about.html and work.html
 
 - **Improved Mobile Navigation Layout:**
   - Fixed CV and Portfolio links on homepage to center properly on mobile
@@ -372,11 +400,11 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 ### Changes Made:
 1. **script.js**: Reordered functions, fixed async initialization, added console logging
 2. **sidebar.html**: Changed image src from relative to absolute path
-3. **cv.html**: 
+3. **about.html**: 
    - Combined page-header and expand controls into single div
    - Changed Expand All from button to span with `.expand-all-link` class
    - Changed Home from button to link with `.home-link-text` class
-4. **portfolio.html**: Updated Home button to Home link with `.home-link-text` class
+4. **work.html**: Updated Home button to Home link with `.home-link-text` class
 5. **components.css**: Added `.home-link-text` and `.expand-all-link` styles, removed `.expand-all-controls`
 6. **layout.css**: Removed `overflow-y: auto` from both sidebar and content areas
 7. **responsive.css**: Enhanced mobile navigation with centering and width constraints
@@ -414,7 +442,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Header displays HOME | CV | PORTFOLIO with proper active link styling
 
 - **Fixed Navigation Paths:**
-  - Updated all links to use absolute paths (/cv/index.html, /cv/cv.html, /cv/portfolio.html)
+  - Updated all links to use absolute paths (/cv/index.html, /cv/about.html, /cv/work.html)
   - Added header-container divs inside main.content on all three pages
   - Improved error handling in script.js init() function
 
@@ -439,7 +467,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
    - Added setActiveHeaderLink() function for page detection
    - Updated init() with proper async/await flow
    - Added error handling with try-catch blocks
-4. **index.html, src/cv.html, src/portfolio.html**:
+4. **index.html, src/about.html, src/work.html**:
    - Added header-container inside main.content div
    - Removed old navigation elements
 5. **assets/css/layout.css**: 
@@ -583,7 +611,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 #### Commit 3: Code Cleanup & Terminology
 - **Removed:** `.grade` CSS class (completely unused)
 - **Replaced:** "certifications" → "certificates" across 7 files:
-  - cv.html, docs/prompt.md, docs/log.md, docs/features.md, docs/design.md
+  - about.html, docs/prompt.md, docs/log.md, docs/features.md, docs/design.md
 - **Enhanced:** Section title font-weight 600 → 700 (better visual weight)
 
 #### Commit 4: Mobile Responsive Refinements
@@ -614,7 +642,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 5. ✅ `assets/css/components.css` - All components updated to Inter
 6. ✅ `assets/css/sections.css` - Removed .grade class, Inter typography
 7. ✅ `assets/css/responsive.css` - Complete mobile hierarchy with 12px baseline
-8. ✅ `cv.html`, `index.html`, `portfolio.html` - No changes needed
+8. ✅ `about.html`, `index.html`, `work.html` - No changes needed
 9. ✅ Multiple documentation files - "certifications" → "certificates"
 
 ### Current Status
