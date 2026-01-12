@@ -106,18 +106,18 @@ cv/
   - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
   - Content: welcome message + CV/PORTFOLIO navigation links
   - Purpose: Entry point, navigation hub
-  - Navigation paths: `src/cv.html` and `src/portfolio.html`
+  - Navigation paths: `/cv.html` and `/portfolio.html`
 
-- **src/cv.html** (CV Page)
-  - Sidebar: loaded dynamically from sidebar.html via JavaScript
+- **cv.html** (CV Page - Root)
+  - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
   - Content: expandable sections (Experience, Education, Achievements, Skills)
-  - Navigation: Home button back to `../index.html`
+  - Navigation: Home button back to `/index.html`
   - Purpose: Display full CV with collapsible sections
 
-- **src/portfolio.html** (Portfolio Page)
-  - Sidebar: loaded dynamically from sidebar.html via JavaScript
+- **portfolio.html** (Portfolio Page - Root)
+  - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
   - Content: placeholder for portfolio projects
-  - Navigation: Home button back to `../index.html`
+  - Navigation: Home button back to `/index.html`
   - Purpose: Dedicated portfolio showcase page
 
 - **src/sidebar.html** (Shared Component)

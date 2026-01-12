@@ -304,8 +304,8 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 
 - **Path Updates:**
   - Updated index.html: styles.css  ssets/css/main.css, script.js  ssets/js/script.js
-  - Updated src/cv.html: ../styles.css  ../assets/css/main.css, ../script.js  ../assets/js/script.js
-  - Updated src/portfolio.html: ../styles.css  ../assets/css/main.css, ../script.js  ../assets/js/script.js
+  - Updated cv.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
+  - Updated portfolio.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
 
 - **Documentation Updates:**
   - Updated rchitecture.md with new file structure and CSS modularization explanation
@@ -414,7 +414,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Header displays HOME | CV | PORTFOLIO with proper active link styling
 
 - **Fixed Navigation Paths:**
-  - Updated all links to use absolute paths (/index.html, /src/cv.html, /src/portfolio.html)
+  - Updated all links to use absolute paths (/index.html, /cv.html, /portfolio.html)
   - Added header-container divs inside main.content on all three pages
   - Improved error handling in script.js init() function
 
