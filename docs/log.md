@@ -1,5 +1,33 @@
 # Development Log
 
+## Session 3: 2026-01-12
+
+### Documentation Synchronization & Home Page Fix
+- **Updated** all documentation files to match current implementation:
+  - Changed all Futura references to Inter (Google Fonts)
+  - Updated font weights: Heavy/Light → 400/500/700
+  - Fixed layout percentages: 30/70% → 350px fixed sidebar
+  - Updated responsive breakpoint: 768px + 480px → 768px only (mobile overlay sidebar)
+  - Updated typography sizes to match actual CSS
+
+- **Fixed Home Page Behavior:**
+  - HOME link now defaults to active on root URL (`/cv/` or `/cv`)
+  - Modified `setActiveHeaderLink()` to properly detect home page:
+    - Checks for `index.html`, `/`, empty path, `/cv/`, and `/cv`
+    - Sets HOME as active by default when visiting root
+
+- **Fixed Component Loading Paths:**
+  - Changed header and sidebar fetch paths from conditional logic to simple relative paths (`./components/header.html`, `./components/sidebar.html`)
+  - Now works seamlessly on both localhost and GitHub Pages
+
+- **Testing:**
+  - ✅ Local development server running on http://127.0.0.1:8000
+  - ✅ All CSS files loading correctly
+  - ✅ Component paths resolved properly
+  - ✅ HOME page now active on root visit
+
+---
+
 ## Session 1: 2026-01-08
 
 ### Phase 1: Project Setup & Design Analysis

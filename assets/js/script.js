@@ -188,10 +188,8 @@
 		}
 
 		try {
-			// Use relative path for local testing, absolute path for GitHub Pages
-			const headerPath = window.location.hostname === 'localhost' 
-				? './components/header.html' 
-				: '/cv/components/header.html';
+			// Use relative path (works for both local and GitHub Pages)
+			const headerPath = './components/header.html';
 			
 			console.log('Loading header from:', headerPath);
 			
@@ -215,10 +213,8 @@
 		if (!sidebarContainer) return;
 
 		try {
-			// Use relative path for local testing, absolute path for GitHub Pages
-			const sidebarPath = window.location.hostname === 'localhost' 
-				? './components/sidebar.html' 
-				: '/cv/components/sidebar.html';
+			// Use relative path (works for both local and GitHub Pages)
+			const sidebarPath = './components/sidebar.html';
 			
 			console.log('Loading sidebar from:', sidebarPath);
 			
@@ -285,7 +281,12 @@
 			const page = link.dataset.page;
 			
 			// Determine current page
-			const isHome = pathname.includes('index.html') || pathname === '/' || pathname === '';
+			// Home is active if: index.html is in path, path ends with '/', or path ends with the domain name
+			const isHome = pathname.includes('index.html') || 
+						  pathname === '/' || 
+						  pathname === '' || 
+						  pathname.endsWith('/cv/') ||
+						  pathname.endsWith('/cv');
 			const isCV = pathname.includes('cv.html');
 			const isPortfolio = pathname.includes('portfolio.html');
 			
