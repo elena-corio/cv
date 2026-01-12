@@ -86,17 +86,6 @@
     letter-spacing: 1px;
 }
 
-.grade {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: #888;
-    font-style: normal;
-    margin: 4px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .subjects {
     list-style: none;
     margin-top: 8px;

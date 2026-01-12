@@ -54,7 +54,7 @@
   - Each skill includes proficiency level in parentheses and grey text
 
 - **Achievements Enhancement:**
-  - Certifications: dates now in grey inline spans (2021), (2019), (2020)
+  - Certificates: dates now in grey inline spans (2021), (2019), (2020)
   - Publications & Awards: dates remain grey and subtle
 
 ---

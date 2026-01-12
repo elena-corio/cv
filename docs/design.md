@@ -144,7 +144,7 @@
 - Proficiency levels displayed inline in grey parentheses.
 
 #### Achievements Section
-- Certifications: With dates in grey inline spans.
+- Certificates: With dates in grey inline spans.
 - Publications: Details of 2016 publication in International Journal of Computational Methods.
 - Awards: "Best Thesis in Computer Graphics - Eurographics Italy" (2017).
 
@@ -194,7 +194,7 @@
 
 ### Achievements Section
 - Structure: only title and bullet point. Proficiency level in parenthesis and light grey font.
-- Certifications: Includes Chartered Engineer (2021) and Rhino/Grasshopper certs.
+- Certificates: Includes Chartered Engineer (2021) and Rhino/Grasshopper certs.
 - Publications: Details a specific 2016 publication in the International Journal of Computational Methods.
 - Awards: "Best Thesis in Computer Graphics - Eurographics Italy" (2017).
 
