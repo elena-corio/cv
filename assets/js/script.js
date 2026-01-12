@@ -11,7 +11,21 @@
 (function() {
 	'use strict';
 
+	// Detect if running on GitHub Pages (subdirectory deployment)
+	// If pathname includes /cv/, prepend it to absolute paths
+	const basePath = window.location.pathname.includes('/cv/') ? '/cv' : '';
+	
+	// Override fetch to prepend basePath to absolute paths when on GitHub Pages
+	const originalFetch = window.fetch;
+	window.fetch = function(url, options) {
+		if (typeof url === 'string' && url.startsWith('/') && !url.startsWith('//')) {
+			url = basePath + url;
+		}
+		return originalFetch(url, options);
+	};
+
 	console.log('Script.js loaded, document.readyState:', document.readyState);
+	console.log('Base path detected:', basePath);
 
 	// ===========================
 	// Expandable Details Component
