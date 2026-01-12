@@ -12,7 +12,7 @@
 }
 
 .home-button {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 400;
     color: #000;
@@ -36,7 +36,7 @@
 }
 
 .home-link-text {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 400;
     color: #000;
@@ -73,17 +73,17 @@
 }
 
 .home-title {
-    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
-    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: 52px;
     font-weight: 700;
     color: #000;
     margin-bottom: 16px;
 }
 
 .home-subtitle {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     color: #666;
     margin: 0;
     text-align: center;
@@ -98,7 +98,7 @@
 }
 
 .home-link {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 28px;
     font-weight: 700;
     color: #000;
@@ -129,8 +129,9 @@
    =========================== */
 
 .placeholder-text {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 14px;
+    font-weight: 400;
     color: #999;
     text-align: center;
     padding: 40px;
@@ -138,7 +139,7 @@
 
 /* Expand All / Collapse All Controls */
 .expand-all-button {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 400;
     color: #000;
@@ -164,7 +165,7 @@
 }
 
 .expand-all-link {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 400;
     color: #000;
@@ -217,9 +218,9 @@
 
 /* Section Headers with Grey Bar */
 .section-title {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     color: #000;
     background-color: #F0F0F0;
@@ -227,6 +228,7 @@
     margin: 0 0 20px 0;
     padding-left: 12px;
     width: 100%;
+    letter-spacing: 1px;
 }
 
 .content > section:first-child .section-title {

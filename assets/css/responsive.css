@@ -2,53 +2,6 @@
    RESPONSIVE DESIGN
    =========================== */
 
-/* Small laptops / larger tablets (768px to 1024px width) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    #sidebar-container {
-        padding: 25px 15px;
-        flex: 0 0 350px;
-    }
-
-    .sidebar {
-        padding: 25px 15px;
-        flex: 0 0 350px;
-    }
-
-    .profile-image img {
-        max-width: 120px;
-    }
-
-    .name {
-        font-size: 18px;
-    }
-
-    .title {
-        font-size: 11px;
-    }
-
-    .summary p {
-        font-size: 10px;
-    }
-
-    .section-title-sidebar {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .contact-list li {
-        font-size: 10px;
-        margin-bottom: 5px;
-    }
-
-    .home-title {
-        font-size: 36px;
-    }
-
-    .home-subtitle {
-        font-size: 13px;
-    }
-}
-
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

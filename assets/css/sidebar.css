@@ -26,8 +26,8 @@
 }
 
 .name {
-    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
-    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
     font-weight: 700;
     color: #000;
     margin-bottom: 4px;
@@ -35,12 +35,13 @@
 }
 
 .title {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     color: #333;
     margin: 0;
     text-transform: none;
+    display: none;
 }
 
 /* Professional Summary */
@@ -49,9 +50,9 @@
 }
 
 .summary p {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 11px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     color: #333;
     line-height: 1.4;
     text-align: justify;
@@ -72,12 +73,13 @@
 }
 
 .section-title-sidebar {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     color: #000;
     text-transform: uppercase;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
 .contact .icon {
@@ -97,9 +99,9 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     color: #333;
 }
 
@@ -127,9 +129,9 @@
 }
 
 .references-note p {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 400;
     color: #555;
     text-align: center;
 }
