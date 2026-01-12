@@ -19,7 +19,7 @@
 - **Relative URLs** — All links use relative paths for portability
 
 ### ✅ Typography & Styling
-- **Futura font stack** with weight hierarchy (Heavy for headers, Light for body)
+- **Inter font stack** with weight hierarchy (Bold for headers, Light for body)
 - **Improved readability** (base font 13px, line-height 1.7)
 - **No italics** globally (modern, clean aesthetic)
 - **Proficiency badges** in grey inline text
@@ -101,7 +101,7 @@
 ### Technical Enhancements
 - [ ] **Service Worker** — offline mode, PWA capabilities
 - [ ] **Lazy loading** — optimize images for slow connections
-- [ ] **Web fonts** — self-hosted Futura (or fallback subset)
+- [x] **Web fonts** — Inter from Google Fonts
 - [ ] **Analytics** — track CV views (optional, privacy-conscious)
 
 ### Localization

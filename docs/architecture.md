@@ -209,13 +209,13 @@ The sidebar uses `flex-direction: column` with `justify-content: space-between` 
 
 ### Typography Hierarchy
 
-- **Name:** 28px Futura Heavy, centered, no uppercase transform
-- **Title:** 18px Futura Light, centered
-- **Main Section Headers:** 24px Futura Heavy (EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS)
-- **Sidebar Contact Header:** 24px Futura Heavy (CONTACT, matches main headers)
-- **Sub-headers (Job, Degree, Achievement titles):** 12–13px Futura Heavy, Title Case (not uppercase)
-- **Body text (bullets):** 12px Futura Light
-- **Proficiency/Detail text:** 11px Futura Light, grey (#999)
+- **Name:** 30px Inter Bold (700), centered, no uppercase transform
+- **Title:** 12px Inter Regular (400), centered
+- **Main Section Headers:** 24px Inter Semi-bold (600) (EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS)
+- **Sidebar Contact Header:** 13px Inter Bold (700) (CONTACT, matches section style)
+- **Sub-headers (Job, Degree, Achievement titles):** 13px Inter Bold (700), Title Case (not uppercase)
+- **Body text (bullets):** 13px Inter Regular (400)
+- **Proficiency/Detail text:** 12px Inter Medium (500), grey (#888)
 - **Dates/metadata:** grey inline or block spans
 
 ### Spacing & Alignment
@@ -532,7 +532,7 @@ node util/appendLog.js "prompt" "response"
 - [MDN Web Docs](https://developer.mozilla.org) — HTML, CSS, JavaScript specs
 - [CSS-Tricks](https://css-tricks.com) — Layout, responsive design patterns
 - [Web.dev](https://web.dev) — Performance, accessibility, SEO best practices
-- [Futura Font Info](https://en.wikipedia.org/wiki/Futura_(typeface)) — Typography details
+- [Inter Font Info](https://rsms.me/inter/) — Modern sans-serif typography
 
 ---
 

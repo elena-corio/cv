@@ -145,7 +145,7 @@ Extend `js/script.js` to add:
 
 ## Typography
 
-- **Font Family:** Futura (or system fallback: Trebuchet MS, sans-serif)
+- **Font Family:** Inter (from Google Fonts, system fallback: sans-serif)
 - **Weights:** 
   - Book (400) — body text, section titles
   - Light (300) — summaries, details

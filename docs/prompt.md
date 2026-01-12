@@ -7,16 +7,16 @@ Convert a static CV design (`web.jpg`) into a responsive HTML/CSS/JS website.
 
 ### Design Specifications
 - **Layout:** Two-column flex layout
-  - Left sidebar (30%): #E6E6E6 background, profile image, name, summary, contact info
-  - Right content (70%): white background, experience, education, skills, achievements
-- **Typography:** Futura font stack (Book 400, Light 300, Heavy 700)
+  - Left sidebar (350px fixed): #E6E6E6 background, profile image, name, summary, contact info
+  - Right content (flex-1): white background, experience, education, skills, achievements
+- **Typography:** Inter font stack (Light 300, Regular 400, Bold 700)
 - **Color Palette:**
   - Sidebar: #E6E6E6
   - Section headers: #F0F0F0
   - Primary text: #000
   - Secondary text: #888
 - **Profile Image:** `picture.jpg` (to be placed in assets/images/)
-- **Responsive:** Mobile-first approach with breakpoints at 768px and 480px
+- **Responsive:** Mobile-first approach with breakpoint at 768px (full-width overlay sidebar with hamburger menu)
 
 ### Content Structure
 1. **Experience:** 2 roles with descriptions (Software Engineer @ Gropyus, Structural Engineer @ B+G Ingenieure)

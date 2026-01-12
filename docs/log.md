@@ -4,7 +4,7 @@
 
 ### Phase 1: Project Setup & Design Analysis
 - **Analyzed** `web.jpg` CV mockup design
-- **Extracted** design specifications: two-column layout, Futura typography, color palette (#E6E6E6, #F0F0F0, #000, #888)
+- **Extracted** design specifications: two-column layout, Inter typography, color palette (#E6E6E6, #F0F0F0, #000, #888)
 - **Defined** content structure: Experience (2), Education (3), Skills (Languages + Technologies), Achievements
 - **Organized** folder structure: css/, js/, assets/images/, docs/, util/
 
@@ -13,9 +13,9 @@
   - Sidebar: profile image (centered, contained, grayscale), name, title, summary, contact (at bottom), references
   - Main content: experience, education, skills, achievements sections
 - **Implemented** `css/styles.css`
-  - Flexbox two-column layout (27/73 split) with sidebar pinned to bottom for contact
-  - Futura font stack (Heavy for headers/titles, Light for body text)
-  - Responsive breakpoints: 768px (tablet), 480px (mobile)
+  - Flexbox two-column layout (350px sidebar, flex-1 content) with sidebar pinned to bottom for contact
+  - Inter font stack (700 Bold for headers/titles, 400 Regular for body text, 500 Medium for metadata)
+  - Responsive breakpoints: 768px (mobile overlay sidebar with hamburger)
   - Print stylesheet for PDF export
 - **Created** `js/script.js`
   - Print functionality (Ctrl+P support)
@@ -32,12 +32,12 @@
 ### Phase 4: Refined Design Implementation
 - **Typography Updates:**
   - Removed all italics globally (`font-style: normal !important`)
-  - Name: 28px Heavy (centered)
-  - Title: 18px Light (centered)
-  - Section headers: 24px Heavy in grey bars (#F0F0F0)
-  - Sub-headers (job, degree, achievement titles): Heavy, Title Case (not uppercase)
-  - Bullet points: Light with generous spacing (10px margin, 1.6 line-height)
-  - Proficiency levels: 11px Light in grey (#999)
+  - Name: 30px Bold (700) centered
+  - Title: 12px Regular (400) centered
+  - Section headers: 24px Semi-bold (600) in grey bars (#F0F0F0)
+  - Sub-headers (job, degree, achievement titles): Bold (700), Title Case (not uppercase)
+  - Bullet points: Regular (400) with generous spacing (13px, 1.6 line-height)
+  - Proficiency levels: 12px Medium (500) in grey (#888)
 
 - **Layout & Alignment:**
   - Profile image: centered, contained (no cropping), grayscale filter
@@ -561,7 +561,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 **Branch Status:** Active on `redefine-style` - Multiple commits tracked
 
 #### Commit 1: Typography System Overhaul
-- **Changed Font:** Futura → Inter (Google Fonts, wght: 300-700)
+- **Changed Font:** Futura → Inter (Google Fonts, wght: 400, 500, 700)
 - **Sidebar Width:** 27% flex → Fixed 350px
 - **Typography Hierarchy (Desktop):**
   - Homepage title: 52px Bold
