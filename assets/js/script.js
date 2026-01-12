@@ -256,10 +256,10 @@
 		}
 		
 		// Show expand all button only on CV page
-		const isOnCVPage = window.location.pathname.includes('/cv.html');
+		const isOnAboutPage = window.location.pathname.includes('/about.html');
 		const expandAllBtn = document.getElementById('expandAllBtn');
 		if (expandAllBtn) {
-			expandAllBtn.style.display = isOnCVPage ? 'inline' : 'none';
+			expandAllBtn.style.display = isOnAboutPage ? 'inline' : 'none';
 		}
 		
 		try {
@@ -287,15 +287,15 @@
 						  pathname === '' || 
 						  pathname.endsWith('/cv/') ||
 						  pathname.endsWith('/cv');
-			const isCV = pathname.includes('cv.html');
+			const isAbout = pathname.includes('about.html');
 			const isPortfolio = pathname.includes('portfolio.html');
 			
 			if (page === 'home' && isHome) {
 				link.classList.add('active');
 				console.log('Set HOME as active');
-			} else if (page === 'cv' && isCV) {
+			} else if (page === 'about' && isAbout) {
 				link.classList.add('active');
-				console.log('Set CV as active');
+				console.log('Set ABOUT as active');
 			} else if (page === 'portfolio' && isPortfolio) {
 				link.classList.add('active');
 				console.log('Set PORTFOLIO as active');

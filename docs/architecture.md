@@ -61,7 +61,7 @@ assets/js/script.js (DOM manipulation, interactivity)
 ```
 cv/
 ├── index.html              # Homepage (entry point - web standard)
-├── cv.html                 # CV page (experience, education, achievements, skills)
+├── about.html                 # About page (experience, education, achievements, skills)
 ├── portfolio.html          # Portfolio page (placeholder for future content)
 ├── components/
 │   ├── header.html         # Shared navigation header component (loaded via JavaScript)
@@ -109,7 +109,7 @@ cv/
   - Purpose: Entry point, navigation hub
   - Navigation paths: `/cv/cv.html` and `/cv/portfolio.html`
 
-- **cv.html** (CV Page - Root)
+- **about.html** (About Page - Root)
   - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: expandable sections (Experience, Education, Achievements, Skills)
   - Navigation: Home button back to `/cv/index.html`

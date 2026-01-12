@@ -4,7 +4,7 @@
 
 ### ✅ Layout & Structure
 - **Refined two-column layout** (27% sidebar, 73% main content)
-- **Multi-page architecture** (index.html home, cv.html CV page, portfolio.html placeholder)
+- **Multi-page architecture** (index.html home, about.html about page, portfolio.html placeholder)
 - **Centered profile section** (grayscale image no-crop, name & title centered below)
 - **Pinned contact section** (bottom of sidebar using flexbox)
 - **Professional spacing** (20px gaps after headers, aligned text, 24px bullet indent)
@@ -13,7 +13,7 @@
 
 ### ✅ Navigation
 - **Homepage (index.html)** — Entry point with CV & PORTFOLIO links
-- **CV Page (cv.html)** — Full CV with collapsible sections + Home button
+- **About Page (about.html)** — Full CV with collapsible sections + Home button
 - **Portfolio Page (portfolio.html)** — Placeholder + Home button
 - **Link styling** — Hover effects (underline), visited state (darker color)
 - **Relative URLs** — All links use relative paths for portability
