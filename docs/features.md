@@ -12,9 +12,9 @@
 - **Responsive homepage** (centered welcome message + navigation links on all screen sizes)
 
 ### ✅ Navigation
-- **Homepage (index.html)** — Entry point with CV & PORTFOLIO links
+- **Homepage (index.html)** — Entry point with WORK & ABOUT links
+- **Work Page (work.html)** — Portfolio placeholder + Home button
 - **About Page (about.html)** — Full CV with collapsible sections + Home button
-- **Portfolio Page (portfolio.html)** — Placeholder + Home button
 - **Link styling** — Hover effects (underline), visited state (darker color)
 - **Relative URLs** — All links use relative paths for portability
 

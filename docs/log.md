@@ -211,7 +211,7 @@
   - Home button at top to return to index.html
   - Same sidebar layout as homepage
 
-- **Created portfolio page** (`portfolio.html`):
+- **Created work page** (`work.html`):
   - Placeholder content ("Portfolio coming soon...")
   - Home button for easy navigation back to index.html
   - Same sidebar layout as other pages
@@ -227,7 +227,7 @@
 - **Navigation architecture:**
   - `index.html` (home) → links to `about.html` and `work.html`
   - `about.html` (About) → Home button links back to `index.html`
-  - `portfolio.html` (portfolio) → Home button links back to `index.html`
+  - `work.html` (work) → Home button links back to `index.html`
   - All navigation uses relative links (no absolute URLs needed)
 
 - **Deleted:** Old `home.html` file (consolidated into `index.html`)
@@ -333,7 +333,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 - **Path Updates:**
   - Updated index.html: styles.css  ssets/css/main.css, script.js  ssets/js/script.js
   - Updated about.html: ../styles.css → assets/css/main.css, ../script.js → assets/js/script.js
-  - Updated portfolio.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
+  - Updated work.html: ../styles.css  assets/css/main.css, ../script.js  assets/js/script.js
 
 - **Documentation Updates:**
   - Updated rchitecture.md with new file structure and CSS modularization explanation
@@ -404,7 +404,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
    - Combined page-header and expand controls into single div
    - Changed Expand All from button to span with `.expand-all-link` class
    - Changed Home from button to link with `.home-link-text` class
-4. **portfolio.html**: Updated Home button to Home link with `.home-link-text` class
+4. **work.html**: Updated Home button to Home link with `.home-link-text` class
 5. **components.css**: Added `.home-link-text` and `.expand-all-link` styles, removed `.expand-all-controls`
 6. **layout.css**: Removed `overflow-y: auto` from both sidebar and content areas
 7. **responsive.css**: Enhanced mobile navigation with centering and width constraints
