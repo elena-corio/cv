@@ -188,11 +188,9 @@
 		}
 
 		try {
-			// Determine if we're in src/ folder by checking current page path
-			const isInSrc = window.location.pathname.includes('/src/');
-			const headerPath = isInSrc ? 'header.html' : 'src/header.html';
+			const headerPath = '/src/header.html';
 			
-			console.log('Loading header from:', headerPath, 'isInSrc:', isInSrc);
+			console.log('Loading header from:', headerPath);
 			
 			const response = await fetch(headerPath);
 			if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -214,11 +212,9 @@
 		if (!sidebarContainer) return;
 
 		try {
-			// Determine if we're in src/ folder by checking current page path
-			const isInSrc = window.location.pathname.includes('/src/');
-			const sidebarPath = isInSrc ? 'sidebar.html' : 'src/sidebar.html';
+			const sidebarPath = '/src/sidebar.html';
 			
-			console.log('Loading sidebar from:', sidebarPath, 'isInSrc:', isInSrc);
+			console.log('Loading sidebar from:', sidebarPath);
 			
 			const response = await fetch(sidebarPath);
 			if (!response.ok) throw new Error(`HTTP ${response.status}`);
