@@ -40,10 +40,10 @@
 - **"Expand All" button** — Collapse/expand all sections at once
 - **Section persistence** — Smooth animations on expand/collapse
 - **Print functionality** — Ctrl+P keyboard support
-- **Clipboard copy** — Email copy-to-clipboard utility
+- **Contact buttons** — Four square icon buttons (Email, LinkedIn, GitHub, PDF)
 
 ### ✅ Visual Polish
-- **Greyscale contact icons** with opacity filter
+- **Contact buttons** — Dark grey (#222) square buttons with white SVG icons, hover effect (#444)
 - **Greyscale profile image** with `object-fit: contain` (no cropping)
 - **Proficiency levels** in muted grey (#999)
 - **Dates/metadata** subtly grey (#888)
@@ -93,7 +93,7 @@
 - [ ] **Skill category toggle** — show/hide skill categories interactively
 
 ### Interactivity
-- [ ] **Copy all contact info** — bulk copy option
+- [ ] **Contact form** — Email form integration
 - [ ] **PDF export button** — generate downloadable PDF with branding
 - [ ] **Share buttons** — LinkedIn, Twitter, email share links
 - [ ] **QR code generator** — link to online CV version
