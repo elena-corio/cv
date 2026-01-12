@@ -555,15 +555,20 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 ## Session 3: 2026-01-12
 
 ### Deployment Path Fix
-- **Issue:** Navigation links (CV, Portfolio) worked locally but failed in deployment due to path handling
-  - Root pages used absolute paths (`/index.html`, `/src/cv.html`)
-  - When deployed to subdirectory (e.g., `example.com/cv/`), paths would break
-  - Browser caching compounded the issue during testing
-- **Solution:** Changed [src/header.html](../src/header.html) to use absolute paths from root (`/index.html`, `/src/cv.html`, `/src/portfolio.html`)
-  - Works correctly both locally on `localhost:8000/` and when deployed
-  - Relative paths (like `../index.html`) failed due to header being dynamically loaded into different contexts
+- **Issue:** Navigation links and image paths failed in deployment due to absolute path usage
+  - Used absolute paths (`/index.html`, `/src/cv.html`, `/assets/images/picture.jpg`)
+  - When deployed to subdirectory (e.g., `example.com/cv/`), absolute paths would break
+  - Picture not visible, CV and Portfolio pages 404
+- **Root Cause:** Absolute paths start at the domain root, not the deployment directory
+- **Solution:** Changed to relative paths that work from any location
+  - [src/sidebar.html](../src/sidebar.html): Image path `../assets/images/picture.jpg`
+  - [src/header.html](../src/header.html): Navigation links `../index.html`, `cv.html`, `portfolio.html`
+  - Relative paths work correctly from both root context (index.html) and src/ context (cv.html, portfolio.html)
+- **Additional Fix:** Removed empty CSS ruleset `.contact { }` from [assets/css/sidebar.css](../assets/css/sidebar.css)
 
 ### Current Status
-✅ **Navigation:** CV, Portfolio, and Home links functional
-✅ **Path Resolution:** Absolute paths work for both local and deployment
-✅ **Browser Cache:** Fixed by clearing cache and using absolute paths
+✅ **Navigation:** CV, Portfolio, and Home links functional locally
+✅ **Images:** Picture visible with relative path
+✅ **Path Resolution:** Relative paths work for local AND deployment (any subdirectory)
+✅ **CSS:** No empty rulesets
+✅ **Deployment Ready:** Works with any base URL
