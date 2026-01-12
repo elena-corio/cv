@@ -35,16 +35,16 @@ Convert a static CV design (`web.jpg`) into a responsive HTML/CSS/JS website.
 **Folder Structure:**
 ```
 cv/
-├── src/
-│   ├── html/
-│   │   └── index.html
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── script.js
-│   └── assets/images/
-│       ├── picture.jpg
-│       └── web.jpg
+├── index.html              # Homepage
+├── cv.html                 # CV page
+├── portfolio.html          # Portfolio page
+├── components/             # Reusable components
+│   ├── header.html         # Navigation header
+│   └── sidebar.html        # Sidebar profile
+├── assets/
+│   ├── css/                # Modular stylesheets
+│   ├── js/                 # JavaScript
+│   └── images/             # Profile pictures
 ├── tests/
 │   └── cv.test.js
 ├── docs/

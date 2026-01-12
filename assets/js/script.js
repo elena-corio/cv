@@ -188,7 +188,7 @@
 		}
 
 		try {
-			const headerPath = '/cv/src/header.html';
+			const headerPath = '/cv/components/header.html';
 			
 			console.log('Loading header from:', headerPath);
 			
@@ -212,7 +212,7 @@
 		if (!sidebarContainer) return;
 
 		try {
-			const sidebarPath = '/cv/src/sidebar.html';
+			const sidebarPath = '/cv/components/sidebar.html';
 			
 			console.log('Loading sidebar from:', sidebarPath);
 			

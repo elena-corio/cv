@@ -1,13 +1,13 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/tests', '<rootDir>/src'],
+  roots: ['<rootDir>/tests'],
   testMatch: [
     '**/tests/**/*.test.js',
     '**/?(*.)+(spec|test).js'
   ],
   collectCoverageFrom: [
-    'src/js/**/*.js',
-    '!src/js/**/*.test.js'
+    'assets/js/**/*.js',
+    '!assets/js/**/*.test.js'
   ],
   coverageThreshold: {
     global: {

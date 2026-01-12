@@ -61,10 +61,11 @@ assets/js/script.js (DOM manipulation, interactivity)
 ```
 cv/
 ├── index.html              # Homepage (entry point - web standard)
-├── src/
-│   ├── cv.html            # CV page (experience, education, achievements, skills)
-│   ├── portfolio.html     # Portfolio page (placeholder for future content)
-│   └── sidebar.html       # Shared sidebar component (loaded via JavaScript)
+├── cv.html                 # CV page (experience, education, achievements, skills)
+├── portfolio.html          # Portfolio page (placeholder for future content)
+├── components/
+│   ├── header.html         # Shared navigation header component (loaded via JavaScript)
+│   └── sidebar.html        # Shared sidebar component (loaded via JavaScript)
 ├── assets/
 │   ├── css/
 │   │   ├── main.css       # Main stylesheet (imports all modular CSS files)
@@ -103,26 +104,26 @@ cv/
 ### Page Structure
 
 - **index.html** (Home - Root)
-  - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
+  - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: welcome message + CV/PORTFOLIO navigation links
   - Purpose: Entry point, navigation hub
-  - Navigation paths: `/cv.html` and `/portfolio.html`
+  - Navigation paths: `/cv/cv.html` and `/cv/portfolio.html`
 
 - **cv.html** (CV Page - Root)
-  - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
+  - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: expandable sections (Experience, Education, Achievements, Skills)
-  - Navigation: Home button back to `/index.html`
+  - Navigation: Home button back to `/cv/index.html`
   - Purpose: Display full CV with collapsible sections
 
 - **portfolio.html** (Portfolio Page - Root)
-  - Sidebar: loaded dynamically from src/sidebar.html via JavaScript
+  - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: placeholder for portfolio projects
-  - Navigation: Home button back to `/index.html`
+  - Navigation: Home button back to `/cv/index.html`
   - Purpose: Dedicated portfolio showcase page
 
-- **src/sidebar.html** (Shared Component)
+- **components/sidebar.html** (Shared Component)
   - Reusable sidebar markup (profile, summary, contact)
-  - Loaded dynamically into all pages using JavaScript fetch()
+  - Loaded dynamically into all pages using JavaScript fetch() from /cv/components/sidebar.html
   - Avoids code duplication across all HTML pages
   - Maintains single source of truth for sidebar content
   - Images reference `assets/` folder (relative to root)

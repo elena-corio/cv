@@ -414,7 +414,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Header displays HOME | CV | PORTFOLIO with proper active link styling
 
 - **Fixed Navigation Paths:**
-  - Updated all links to use absolute paths (/index.html, /cv.html, /portfolio.html)
+  - Updated all links to use absolute paths (/cv/index.html, /cv/cv.html, /cv/portfolio.html)
   - Added header-container divs inside main.content on all three pages
   - Improved error handling in script.js init() function
 
