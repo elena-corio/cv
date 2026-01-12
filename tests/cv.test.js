@@ -157,9 +157,12 @@ describe('Sidebar Component', () => {
         </div>
         <div class="contact">
           <h2 class="section-title-sidebar">CONTACT</h2>
-          <ul class="contact-list">
-            <li>Email: elena@example.com</li>
-          </ul>
+          <div class="contact-buttons">
+            <a href="mailto:elena@example.com" class="contact-btn">Email</a>
+            <a href="https://linkedin.com" class="contact-btn">LinkedIn</a>
+            <a href="https://github.com" class="contact-btn">GitHub</a>
+            <a href="#" class="contact-btn">PDF</a>
+          </div>
         </div>
       </div>
     `;
@@ -187,9 +190,9 @@ describe('Sidebar Component', () => {
     expect(contact).toBeDefined();
   });
 
-  test('should have contact list', () => {
-    const list = document.querySelector('.contact-list');
-    expect(list).toBeDefined();
-    expect(list.children.length).toBeGreaterThan(0);
+  test('should have contact buttons', () => {
+    const buttons = document.querySelectorAll('.contact-btn');
+    expect(buttons.length).toBe(4);
+    expect(buttons[0].href).toContain('mailto:');
   });
 });

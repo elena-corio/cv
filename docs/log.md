@@ -1,5 +1,23 @@
 # Development Log
 
+## Session 4: 2026-01-12
+
+### Contact Section Redesign: Icon Buttons
+- **Replaced** text-based contact list with four square icon buttons:
+  - Email → mailto:elena.corio@students.iaac.net
+  - LinkedIn → https://www.linkedin.com/in/elena-corio-68bab4128/
+  - GitHub → https://github.com/elena-corio
+  - PDF → placeholder link (#)
+- **Styling changes:**
+  - Buttons: 44x44px (desktop), 40x40px (mobile)
+  - Background: #222 dark grey with hover effect (#444)
+  - Icons: White SVG, centered, 22px size
+  - Spacing: Full-width spread using `justify-content: space-between`
+  - Added `margin-top: 40px` to contact section for spacing
+  - Removed `letter-spacing: 1px` from CONTACT title for consistency with HOME
+- **Updated** sidebar.html, sidebar.css, and responsive.css
+- **Updated** design.md and features.md to document new contact button design
+
 ## Session 3: 2026-01-12
 
 ### Documentation Synchronization & Home Page Fix

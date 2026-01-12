@@ -361,23 +361,18 @@ font-family: 'Inter', sans-serif;
 (function() {
   'use strict';
   
-  // Private functions
-  function setupPrint() { /* ... */ }
-  function setupClipboard() { /* ... */ }
+  // Header link active state detection
+  function setActiveHeaderLink() { /* ... */ }
   
-  // Public API (optional)
-  window.CVPage = {
-    toggleDarkMode: toggleDarkMode,
-    exportPDF: exportPDF
-  };
+  // Hamburger menu toggle
+  function setupHamburgerMenu() { /* ... */ }
 })();
 ```
 
 ### Current Features
-1. **Print handler** — Ctrl+P support
-2. **Clipboard utility** — Copy email to clipboard
-3. **Year auto-display** — Current year in DOM
-4. **Placeholder hooks** — Future feature stubs (dark mode, filtering, etc.)
+1. **Header active state** — Automatically highlights current page in navigation
+2. **Hamburger menu** — Mobile sidebar toggle
+3. **Dynamic component loading** — Header and sidebar load via fetch() API
 
 ---
 
