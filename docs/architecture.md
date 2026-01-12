@@ -107,7 +107,7 @@ cv/
   - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript
   - Content: welcome message + CV/PORTFOLIO navigation links
   - Purpose: Entry point, navigation hub
-  - Navigation paths: `/cv/cv.html` and `/cv/portfolio.html`
+  - Navigation paths: `/cv/about.html` and `/cv/work.html`
 
 - **about.html** (About Page - Root)
   - Sidebar: loaded dynamically from /cv/components/sidebar.html via JavaScript

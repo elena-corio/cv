@@ -4,7 +4,7 @@
 
 ### ✅ Layout & Structure
 - **Refined two-column layout** (27% sidebar, 73% main content)
-- **Multi-page architecture** (index.html home, about.html about page, portfolio.html placeholder)
+- **Multi-page architecture** (index.html home, about.html about page, work.html work placeholder)
 - **Centered profile section** (grayscale image no-crop, name & title centered below)
 - **Pinned contact section** (bottom of sidebar using flexbox)
 - **Professional spacing** (20px gaps after headers, aligned text, 24px bullet indent)

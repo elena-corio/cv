@@ -288,7 +288,7 @@
 						  pathname.endsWith('/cv/') ||
 						  pathname.endsWith('/cv');
 			const isAbout = pathname.includes('about.html');
-			const isPortfolio = pathname.includes('portfolio.html');
+			const isWork = pathname.includes('work.html');
 			
 			if (page === 'home' && isHome) {
 				link.classList.add('active');
@@ -296,9 +296,9 @@
 			} else if (page === 'about' && isAbout) {
 				link.classList.add('active');
 				console.log('Set ABOUT as active');
-			} else if (page === 'portfolio' && isPortfolio) {
+			} else if (page === 'work' && isWork) {
 				link.classList.add('active');
-				console.log('Set PORTFOLIO as active');
+				console.log('Set WORK as active');
 			}
 		});
 	}

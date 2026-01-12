@@ -225,7 +225,7 @@
   - Visited links appear in darker grey (#666) for visual feedback
 
 - **Navigation architecture:**
-  - `index.html` (home) → links to `about.html` and `portfolio.html`
+  - `index.html` (home) → links to `about.html` and `work.html`
   - `about.html` (About) → Home button links back to `index.html`
   - `portfolio.html` (portfolio) → Home button links back to `index.html`
   - All navigation uses relative links (no absolute URLs needed)
@@ -235,7 +235,7 @@
 ### Phase 7: Code Refactoring - DRY Sidebar Component
 - **Extracted reusable sidebar:**
   - Created `sidebar.html` with shared sidebar markup
-  - Removed duplicate sidebar code from index.html, about.html, and portfolio.html
+  - Removed duplicate sidebar code from index.html, about.html, and work.html
   - Replaced with `<div id="sidebar-container"></div>` placeholder in all pages
 
 - **Implemented dynamic sidebar loading:**
@@ -370,7 +370,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Added console logging for debugging sidebar load path
 
 - **Fixed Sidebar Image Path:**
-  - Issue: Profile picture not visible on about.html and portfolio.html pages
+  - Issue: Profile picture not visible on about.html and work.html pages
   - Root cause: Relative path `assets/images/picture.jpg` failed from src/ folder
   - Fix: Changed to absolute path `/assets/images/picture.jpg` in sidebar.html
   - Now works correctly from all pages regardless of folder depth
@@ -380,7 +380,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Updated class from `.expand-all-button` to `.expand-all-link`
   - Updated CSS styling: removed button styles, added text link styling with underline on hover
   - Home button also converted to text link style for consistency
-  - Updated both about.html and portfolio.html
+  - Updated both about.html and work.html
 
 - **Improved Mobile Navigation Layout:**
   - Fixed CV and Portfolio links on homepage to center properly on mobile
@@ -442,7 +442,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
   - Header displays HOME | CV | PORTFOLIO with proper active link styling
 
 - **Fixed Navigation Paths:**
-  - Updated all links to use absolute paths (/cv/index.html, /cv/about.html, /cv/portfolio.html)
+  - Updated all links to use absolute paths (/cv/index.html, /cv/about.html, /cv/work.html)
   - Added header-container divs inside main.content on all three pages
   - Improved error handling in script.js init() function
 
@@ -467,7 +467,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
    - Added setActiveHeaderLink() function for page detection
    - Updated init() with proper async/await flow
    - Added error handling with try-catch blocks
-4. **index.html, src/about.html, src/portfolio.html**:
+4. **index.html, src/about.html, src/work.html**:
    - Added header-container inside main.content div
    - Removed old navigation elements
 5. **assets/css/layout.css**: 
@@ -642,7 +642,7 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 5. ✅ `assets/css/components.css` - All components updated to Inter
 6. ✅ `assets/css/sections.css` - Removed .grade class, Inter typography
 7. ✅ `assets/css/responsive.css` - Complete mobile hierarchy with 12px baseline
-8. ✅ `about.html`, `index.html`, `portfolio.html` - No changes needed
+8. ✅ `about.html`, `index.html`, `work.html` - No changes needed
 9. ✅ Multiple documentation files - "certifications" → "certificates"
 
 ### Current Status
