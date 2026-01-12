@@ -237,34 +237,35 @@ The sidebar uses `flex-direction: column` with `justify-content: space-between` 
 | Device | Width | Layout | Behavior |
 |--------|-------|--------|----------|
 | Desktop | 1024px+ | Two-column (30/70) | Full layout, normal spacing |
-| Tablet | 768px–1023px | Stacked (sidebar on top) | Adjusted typography, padding |
-| Mobile | <768px | Full-width, stacked | Smaller fonts, reduced margins |
-| Small Mobile | <480px | Full-width, minimal | Compressed typography, minimal padding |
-
-**Media Queries:**
-```css
-@media (max-width: 768px) { /* Sidebar stacks on top */ }
-@media (max-width: 480px) { /* Compressed mobile layout */ }
-```
-
 ---
 
 ## Typography System
 
-### Font Stack
+### Font Stack (Updated 2026-01-12)
 ```css
-font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+font-family: 'Inter', sans-serif;
+/* Google Fonts: wght: 300, 400, 500, 600, 700 */
 ```
 
-### Font Weights & Styles
+**Rationale:** Inter replaces Futura for superior digital readability, modern aesthetic, and better mobile performance. Variable weights provide precise typographic control.
 
-| Use | Family | Weight | Style | Size | Example |
-|-----|--------|--------|-------|------|---------|
-| Headings (section) | Futura Book | 400 (normal) | normal | 24px | EXPERIENCE, EDUCATION |
-| Job/degree title | Futura Heavy | 700 (bold) | normal | 12px | Software Engineer |
-| Body text | Futura Light | 300 (light) | normal | 12px | Descriptions, bullets |
-| Metadata | Futura Book | 400 (normal) | normal | 12px | Company, dates (grey) |
-| Secondary details | Futura Light | 300 (light) | italic | 12px | Proficiency, summary |
+### Font Weights & Styles (Inter System)
+
+| Use | Weight | Style | Size | Example |
+|-----|--------|-------|------|---------|
+| Headings (section) | 600 (Semi-bold) | normal | 24px (desktop), 20px (mobile) | EXPERIENCE, EDUCATION |
+| Job/degree/skill title | 700 (Bold) | normal | 13px (desktop), 12px (mobile) | Software Engineer |
+| Body text & bullets | 400 (Regular) | normal | 13px (desktop), 12px (mobile) | Descriptions, bullets |
+| Metadata & labels | 500 (Medium) | normal | 12px (desktop), 10px (mobile) | Company, dates, proficiency |
+| Secondary details | 300 (Light) | normal | 12px | Summary, supporting text |
+
+### Hierarchy Levels
+1. **Level 1** (52px Bold on desktop, 36px on mobile) - Homepage title
+2. **Level 2** (30px Bold on desktop, 26px on mobile) - Sidebar name  
+3. **Level 3** (24px Semi-bold) - Section headers (EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS)
+4. **Level 4** (13px Bold desktop / 12px Bold mobile) - Job/degree/skill titles
+5. **Level 5** (13px Regular desktop / 12px Regular mobile) - Body text and bullet descriptions
+6. **Level 6** (12px Medium desktop / 10px Medium mobile) - Dates, proficiency, metadata
 
 ---
 
@@ -273,10 +274,10 @@ font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
 | Element | Color | Hex | Use Case |
 |---------|-------|-----|----------|
 | Sidebar BG | Light Grey | #E6E6E6 | Left column background |
-| Section Headers BG | Lighter Grey | #F0F0F0 | Section title bar |
-| Primary Text | Black | #000 | Job titles, body text |
-| Secondary Text | Grey | #888 | Company, dates, proficiency |
-| Accent | Light Grey | #ccc | Border lines, dividers |
+| Section Headers BG | Lighter Grey | #F0F0F0 | Section title bar background |
+| Primary Text | Black | #000 | Job titles, body text, headings |
+| Secondary Text | Grey | #888–#999 | Company, dates, proficiency levels |
+| Accent | Light Grey | #ccc | Subtle borders, dividers |
 | Background | White | #fff | Main content area |
 
 ---
@@ -285,7 +286,7 @@ font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
 
 ### `.eslintrc.js`
 - **Purpose:** JavaScript linting configuration
-- **Scope:** `src/js/`, `tests/`, all JavaScript files
+- **Scope:** `assets/js/`, `tests/`, all JavaScript files
 - **Enforces:** 
   - Code quality rules (no unused variables, proper syntax)
   - Best practices (semicolons, naming conventions)
@@ -301,7 +302,7 @@ font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
   - Proper indentation (2 spaces)
   - Line length (100 characters)
   - Spacing and trailing commas
-- **Run:** `npx prettier --write src/` (or auto on save if IDE configured)
+- **Run:** `npx prettier --write .` (or auto on save if IDE configured)
 - **Contents:** printWidth 100, tabWidth 2, single quotes, trailing commas ES5
 
 ### `jest.config.js`
@@ -322,7 +323,7 @@ font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
 ```html
 <div class="container">
   <aside class="sidebar">
-    <!-- Profile, contact, etc. -->
+    <!-- Profile, contact, etc. - loaded dynamically -->
   </aside>
   <main class="content">
     <!-- Experience, education, skills, achievements -->
@@ -333,22 +334,27 @@ font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
 ### Section Template
 ```html
 <section class="experience-section">
-  <h2 class="section-title">EXPERIENCE</h2>
-  <article class="job">
-    <h3 class="job-title">Software Engineer</h3>
-    <p class="job-company">Gropyus, Vienna</p>
-    <p class="job-dates">Oct 2020 – June 2025</p>
-    <ul class="job-description">
-      <li>Bullet point 1</li>
-      <li>Bullet point 2</li>
-    </ul>
-  </article>
+  <div class="expandable-header" data-section="experience">
+    <h2 class="section-title">
+      <span class="toggle-icon">+</span>
+      EXPERIENCE
+    </h2>
+  </div>
+  <div class="expandable-content" id="experience">
+    <article class="job">
+      <h3 class="job-title">Software Engineer</h3>
+      <p class="job-company">Gropyus, Vienna</p>
+      <p class="job-dates">Oct 2020 – June 2025</p>
+      <ul class="job-description">
+        <li>Bullet point 1</li>
+        <li>Bullet point 2</li>
+      </ul>
+    </article>
+  </div>
 </section>
 ```
 
----
-
-## JavaScript Architecture
+---## JavaScript Architecture
 
 ### Modular IIFE Pattern
 ```javascript

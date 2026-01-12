@@ -33,7 +33,7 @@
 - **Skills** (Languages + Technologies)
   - Languages: Italian, English, German
   - Technologies: Parametric & Visual Scripting, Programming, Environmental Analysis, Structural Analysis, Graphic & Communication, Productivity
-- **Achievements** (Certifications with dates, Publications, Awards)
+- **Achievements** (Certificates with dates, Publications, Awards)
 
 ### ✅ Interactivity
 - **Expandable sections** (Experience, Education, Achievements, Skills with +/- toggle icons)
@@ -89,7 +89,7 @@
 ### Content & Navigation
 - [ ] **Table of contents sidebar** — quick section navigation
 - [ ] **Scroll spy** — highlight current section in sidebar
-- [ ] **Search/filter** — search skills, certifications by keyword
+- [ ] **Search/filter** — search skills, certificates by keyword
 - [ ] **Skill category toggle** — show/hide skill categories interactively
 
 ### Interactivity

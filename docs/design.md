@@ -1,103 +1,87 @@
 # Design Specification — CV Layout & Styling
 
-**Updated:** 2026-01-08
+**Updated:** 2026-01-12 (Inter typography system, 350px fixed sidebar)
 
 ---
 
-## AI Coding Prompt (Implementation Guidelines)
+## Current Design System
 
-> Please update the web application code with the following specific design adjustments:
+### Typography
+- **Font Family:** Inter (Google Fonts, wght: 300-700)
+- **System:** Modern, clean, highly readable sans-serif
+- **Weights Used:**
+  - 300 (Light) - Secondary details, subtle text
+  - 400 (Regular) - Body text, descriptions
+  - 500 (Medium) - Metadata, uppercase labels
+  - 600 (Semi-bold) - Emphasis, highlights
+  - 700 (Bold) - Headers, titles, primary focus
 
-### 1. Typography & Text Styling
+### Color Palette
+- **Sidebar Background:** #E6E6E6 (light grey)
+- **Section Headers:** #F0F0F0 (lighter grey background)
+- **Primary Text:** #000 (black) for all body and heading content
+- **Secondary Text:** #888-#999 (grey) for dates, proficiency, metadata
+- **Content Area:** #fff (white background)
 
-**Remove All Italics:** Ensure no text on the page is italicized. Convert all currently italicized text (the professional summary, dates, and sub-labels) to standard 'normal' font style.
+### Sidebar Layout
+- **Width:** Fixed 350px (desktop), responsive overlay (mobile ≤768px)
+- **Structure:** Flex column with `justify-content: space-between`
+  - `.sidebar-top`: Profile image, name, title, summary
+  - `.sidebar-bottom`: Contact section pinned to bottom via `margin-top: auto;`
+- **Profile Image:** Centered, max-height 220px, grayscale filter, `object-fit: contain`
+- **Name:** 30px Bold, centered, no uppercase transform
+- **Title:** 12px Regular, centered
+- **Summary:** 12px Regular, line-height 1.6, justified alignment
+- **Contact Icons:** Grayscale with opacity 0.6 and brightness filter
 
-**Name & Title:**
-- Change 'MA Elena Corio' to Title Case (not all-caps). Set the font size to 28px.
-- Change 'Computational Designer' to Title Case. Set the font size to 18px.
-- Both should be **centered** below the profile image.
+### Typography Hierarchy
 
-**Section Headers:** Keep the main section headers (EXPERIENCE, EDUCATION, SKILLS, ACHIEVEMENTS) in All-Caps and bold, but ensure the 'CONTACT' header in the sidebar matches this style exactly (24px, bold).
+**Desktop:**
+- Homepage Title: 52px Bold
+- Section Headers: 24px Semi-bold (#F0F0F0 background, full-width)
+- Sidebar Name: 30px Bold
+- Job/Degree/Skill Titles: 13px Bold
+- Body Text (bullets): 13px Regular
+- Metadata (dates, proficiency): 12px Medium, uppercase, grey
 
-### 2. Sidebar Layout & Contact Positioning
+**Mobile (≤768px):**
+- Homepage Title: 36px Bold
+- Section Headers: 20px Semi-bold
+- Sidebar Name: 26px Bold
+- Job/Degree/Skill Titles: 12px Bold
+- Body Text: 12px Regular
+- Metadata: 10px Medium, uppercase, grey
 
-**Contact Section:** Move the entire 'Contact' section to the absolute bottom of the grey sidebar using flexbox (`flex-direction: column` with `justify-content: space-between`).
-
-**References:** Place the text 'References Available Upon Request' directly below the contact details at the very bottom.
-
-**Icon Styling:** Ensure all icons in the contact section are rendered in **greyscale** (opacity 0.6, brightness filter).
-
-### 3. Spacing & Alignment
-
-**Header Margin:** Reduce the white space between the edge of the grey sidebar and the start of the grey horizontal header bars in the main column. The gap should be minimal (0px left margin for full-width bars).
-
-**Image Integrity:** Ensure the profile photo at the top of the sidebar is displayed in its entirety without any cropping using `object-fit: contain`.
-
-**Text Alignment:** Align skill category headers and all sub-headers with bullet-point text using consistent left padding (16px).
-
-### 4. CSS Specifics
-
-```css
-/* Sidebar layout: profile at top, contact pinned to bottom */
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Global italic removal */
-* {
-    font-style: normal !important;
-}
-
-/* Full-width header bars */
-.section-title {
-    width: 100%;
-    margin: 0 0 35px 0;
-}
-```
-
-### Why These Changes Work
-
-- **28px/18px Ratio:** Creates a clear visual anchor at the top (name prominent but not shouting). Title is proportionally smaller.
-- **Removing Italics:** Makes digital CVs easier to read on low-resolution screens and gives the design a modern, "app-like" feel.
-- **Tightened Spacing:** Full-width header bars (0 left margin) make the two halves of the page feel like a single cohesive document.
-- **Centered Profile:** Draws visual focus and creates a balanced sidebar design.
-- **Greyscale Icons:** Reduces visual noise while maintaining information hierarchy.
+### Spacing & Layout
+- **Section Spacing:** 35px margin-bottom between major sections
+- **Header Margin:** 0px left margin (full-width bars)
+- **List Item Padding:** 24px left padding (bullets)
+- **Text Alignment:** Left-aligned on mobile, justified on desktop (summary only)
+- **Mobile Sidebar:** Fixed 100vh height, flex-based positioning
+- **Contact Anchoring:** `margin-top: auto;` on `.sidebar-bottom`
 
 ---
 
-## Additional Design Changes (Session 1)
+## Implementation Status
 
-### Skills Section Restructuring
-- **Languages:** Italian, English, German (with inline proficiency levels)
-- **Technologies:** 6 categories replacing 7 separate groups
-  - Visual Coding (Grasshopper, Dynamo)
-  - Programming (Python, C#, JavaScript)
-  - Environmental Analysis (Energy Simulation, Daylighting, CFD)
-  - Structural Analysis (FEA, Parametric Optimization)
-  - 3D Modeling (Rhino 3D, AutoCAD, Revit)
-  - Other (Adobe Suite, Microsoft Office, Git, Collaboration tools)
-
-### Proficiency Badges & Metadata
-- Inline grey (11px, #999) proficiency levels: *(Expert)*, *(Advanced)*, *(Intermediate)*
-- Certification dates styled as inline grey spans: *(2021)*, *(2019)*, *(2020)*
-- Publication and award details remain grey and subtle
-
-### Responsive Breakpoints
-- **Desktop:** 27/73 sidebar-to-content split, full spacing
-- **Tablet (768px):** Stacked layout (sidebar on top), adjusted typography
-- **Mobile (480px):** Full-width, minimal spacing, compressed fonts
+✅ **Font System:** Inter (Google Fonts) - Modern, professional, highly legible
+✅ **Sidebar:** Fixed 350px width on desktop, responsive on mobile
+✅ **Typography:** Complete 6-level hierarchy (52px → 10px)
+✅ **Color:** Professional grey palette (#E6E6E6, #F0F0F0, #888, #999)
+✅ **Spacing:** Balanced whitespace throughout
+✅ **Mobile First:** Responsive design optimized for all screen sizes
+✅ **Accessibility:** Semantic HTML, proper contrast ratios, readable text sizes
 
 ---
 
-## Current Implementation Status
+## Original Design Specifications (Reference)
 
-✅ **Implemented:**
-- No italics globally
-- Name (28px Heavy, centered), Title (18px Light, centered)
-- Section headers 24px Heavy in grey bars, full-width
-- Sidebar flexbox with contact pinned to bottom
+### Initial Design Goals
+- Structure: Two-column flex layout
+- Sidebar: 30% width, #E6E6E6 background, profile + contact
+- Main Content: 70% width, white background
+- Typography: Professional san-serif with clear hierarchy
+- Responsiveness: Mobile-first approach with breakpoints at 768px and 480px
 - Greyscale icons (opacity + brightness filter)
 - Profile image centered, contained, grayscale
 - Skill/header alignment (16px left padding)
@@ -144,7 +128,7 @@
 - Proficiency levels displayed inline in grey parentheses.
 
 #### Achievements Section
-- Certifications: With dates in grey inline spans.
+- Certificates: With dates in grey inline spans.
 - Publications: Details of 2016 publication in International Journal of Computational Methods.
 - Awards: "Best Thesis in Computer Graphics - Eurographics Italy" (2017).
 
@@ -194,7 +178,7 @@
 
 ### Achievements Section
 - Structure: only title and bullet point. Proficiency level in parenthesis and light grey font.
-- Certifications: Includes Chartered Engineer (2021) and Rhino/Grasshopper certs.
+- Certificates: Includes Chartered Engineer (2021) and Rhino/Grasshopper certs.
 - Publications: Details a specific 2016 publication in the International Journal of Computational Methods.
 - Awards: "Best Thesis in Computer Graphics - Eurographics Italy" (2017).
 

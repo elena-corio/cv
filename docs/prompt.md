@@ -22,7 +22,7 @@ Convert a static CV design (`web.jpg`) into a responsive HTML/CSS/JS website.
 1. **Experience:** 2 roles with descriptions (Software Engineer @ Gropyus, Structural Engineer @ B+G Ingenieure)
 2. **Education:** 3 entries (MaCAD @ IAAC, Master's @ Pisa, Research @ CNR)
 3. **Skills:** 7 categories (Languages, Visual Scripting, Programming, Environmental, Structural, Design, Office)
-4. **Achievements:** Certifications, Publications, Awards
+4. **Achievements:** Certificates, Publications, Awards
 
 ### Development Approach
 - **Static HTML** for initial phase (no frameworks)

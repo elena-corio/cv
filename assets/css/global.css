@@ -2,6 +2,8 @@
    GLOBAL & RESET
    =========================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +21,7 @@ html {
 }
 
 body {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     line-height: 1.7;
     color: #000;

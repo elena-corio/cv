@@ -15,8 +15,8 @@
 }
 
 .job-title {
-    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     font-weight: 700;
     color: #000;
     margin-bottom: 4px;
@@ -24,11 +24,13 @@
 
 .job-company,
 .job-dates {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     color: #888;
     margin: 2px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .job-description {
@@ -38,9 +40,9 @@
 }
 
 .job-description li {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 13px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
     color: #000;
     margin-left: 0;
     margin-bottom: 12px;
@@ -66,8 +68,8 @@
 }
 
 .degree-title {
-    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     font-weight: 700;
     color: #000;
     margin-bottom: 4px;
@@ -75,20 +77,13 @@
 
 .institution,
 .dates {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 500;
     color: #888;
     margin: 2px 0;
-}
-
-.grade {
-    font-family: 'Futura Book', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #888;
-    font-style: normal;
-    margin: 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .subjects {
@@ -98,9 +93,9 @@
 }
 
 .subjects li {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
     color: #000;
     padding-left: 24px;
     position: relative;
@@ -125,7 +120,7 @@
 }
 
 .skill-category {
-    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 700;
     text-transform: none;
@@ -141,9 +136,9 @@
 }
 
 .skill-list li {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
     color: #000;
     margin-bottom: 10px;
     line-height: 1.6;
@@ -159,11 +154,13 @@
 }
 
 .proficiency {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 11px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
     color: #999;
     font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* ===========================
@@ -176,8 +173,8 @@
 }
 
 .achievement-title {
-    font-family: 'Futura Heavy', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     font-weight: 700;
     color: #000;
     margin-bottom: 8px;
@@ -189,9 +186,9 @@
 }
 
 .achievement-list li {
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
     color: #000;
     margin-bottom: 6px;
     position: relative;
@@ -210,12 +207,14 @@
 .award-detail,
 .certification-date {
     display: inline;
-    font-family: 'Futura Light', 'Trebuchet MS', sans-serif;
-    font-size: 11px;
-    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
     color: #888;
     font-style: normal;
     margin-left: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .publication-detail,

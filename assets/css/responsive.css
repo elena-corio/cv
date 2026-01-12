@@ -2,51 +2,6 @@
    RESPONSIVE DESIGN
    =========================== */
 
-/* Small laptops / larger tablets (768px to 1024px width) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    #sidebar-container {
-        padding: 25px 15px;
-    }
-
-    .sidebar {
-        padding: 25px 15px;
-    }
-
-    .profile-image img {
-        max-width: 120px;
-    }
-
-    .name {
-        font-size: 18px;
-    }
-
-    .title {
-        font-size: 11px;
-    }
-
-    .summary p {
-        font-size: 10px;
-    }
-
-    .section-title-sidebar {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    .contact-list li {
-        font-size: 10px;
-        margin-bottom: 5px;
-    }
-
-    .home-title {
-        font-size: 36px;
-    }
-
-    .home-subtitle {
-        font-size: 13px;
-    }
-}
-
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -93,6 +48,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
     }
 
     .sidebar-top {
@@ -103,6 +59,7 @@
         position: static;
         padding: 20px 0 0 0;
         background-color: transparent;
+        margin-top: auto;
     }
 
     .content {
@@ -110,7 +67,7 @@
     }
 
     .section-title {
-        font-size: 18px;
+        font-size: 20px;
         padding: 8px 12px;
         margin: 0 0 15px 8px;
         padding-left: 12px;
@@ -118,12 +75,12 @@
     }
 
     .section-title-sidebar {
-        font-size: 18px;
+        font-size: 12px;
         margin-bottom: 12px;
     }
 
     .name {
-        font-size: 20px;
+        font-size: 26px;
     }
 
     .title {
@@ -145,14 +102,27 @@
 
     .job-title,
     .degree-title,
-    .skill-category {
-        font-size: 11px;
+    .skill-category,
+    .achievement-title {
+        font-size: 12px;
+    }
+
+    .job-company,
+    .job-dates,
+    .institution,
+    .dates,
+    .proficiency,
+    .publication-detail,
+    .award-detail,
+    .certification-date {
+        font-size: 10px;
     }
 
     .job-description li,
     .subjects li,
-    .skill-list li {
-        font-size: 11px;
+    .skill-list li,
+    .achievement-list li {
+        font-size: 12px;
     }
 
     .contact-list li {
@@ -165,7 +135,7 @@
     }
 
     .home-title {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .home-subtitle {
@@ -204,12 +174,12 @@
     }
 
     .header-link {
-        font-size: 10px;
+        font-size: 12px;
         padding: 4px 0;
     }
 
     .expand-all-link {
-        font-size: 10px;
+        font-size: 12px;
         margin-left: auto;
     }
 }

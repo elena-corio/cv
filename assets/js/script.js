@@ -188,7 +188,10 @@
 		}
 
 		try {
-			const headerPath = '/cv/components/header.html';
+			// Use relative path for local testing, absolute path for GitHub Pages
+			const headerPath = window.location.hostname === 'localhost' 
+				? './components/header.html' 
+				: '/cv/components/header.html';
 			
 			console.log('Loading header from:', headerPath);
 			
@@ -212,7 +215,10 @@
 		if (!sidebarContainer) return;
 
 		try {
-			const sidebarPath = '/cv/components/sidebar.html';
+			// Use relative path for local testing, absolute path for GitHub Pages
+			const sidebarPath = window.location.hostname === 'localhost' 
+				? './components/sidebar.html' 
+				: '/cv/components/sidebar.html';
 			
 			console.log('Loading sidebar from:', sidebarPath);
 			
