@@ -551,3 +551,19 @@ esponsive.css - Media queries for 768px and 480px (100 lines)
 ✅ **Tests:** All 16 tests still passing
 ✅ **Production Ready:** Complete site with polished mobile experience
 ✅ **Documentation:** Development log updated with all refinements
+
+## Session 3: 2026-01-12
+
+### Deployment Path Fix
+- **Issue:** Navigation links (CV, Portfolio) worked locally but failed in deployment due to path handling
+  - Root pages used absolute paths (`/index.html`, `/src/cv.html`)
+  - When deployed to subdirectory (e.g., `example.com/cv/`), paths would break
+  - Browser caching compounded the issue during testing
+- **Solution:** Changed [src/header.html](../src/header.html) to use absolute paths from root (`/index.html`, `/src/cv.html`, `/src/portfolio.html`)
+  - Works correctly both locally on `localhost:8000/` and when deployed
+  - Relative paths (like `../index.html`) failed due to header being dynamically loaded into different contexts
+
+### Current Status
+✅ **Navigation:** CV, Portfolio, and Home links functional
+✅ **Path Resolution:** Absolute paths work for both local and deployment
+✅ **Browser Cache:** Fixed by clearing cache and using absolute paths
