@@ -12,7 +12,7 @@
   - Buttons: 44x44px (desktop), 40x40px (mobile)
   - Background: #222 dark grey with hover effect (#444)
   - Icons: White SVG, centered, 22px size
-  - Gap: 12px between buttons
+  - Spacing: Full-width spread using `justify-content: space-between`
   - Added `margin-top: 40px` to contact section for spacing
   - Removed `letter-spacing: 1px` from CONTACT title for consistency with HOME
 - **Updated** sidebar.html, sidebar.css, and responsive.css

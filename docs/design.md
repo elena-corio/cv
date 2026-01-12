@@ -56,7 +56,7 @@
 - Title: 12px Regular (400)
 - Summary: 12px Regular (400), line-height 1.6, justified
 - Contact label: 13px Bold (700)
-- Contact buttons: 44x44px square icons, #222 background, white SVG icons
+- Contact buttons: 44x44px square icons, #222 background, white SVG icons, full-width spread (space-between)
 - References note: 12px Regular (400)
 
 **Main Content:**
